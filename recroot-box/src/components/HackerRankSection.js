@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 // import './App.css';
 
-
-
-
 class  HackerRankSection extends Component {
   constructor(){
     super();
@@ -14,8 +11,6 @@ class  HackerRankSection extends Component {
       error: null
     };
   }
-
-  
 
   componentDidMount(){
     var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
@@ -45,7 +40,7 @@ class  HackerRankSection extends Component {
   render() {
     console.log(this.state.data);
     return (
-      <div className="RecrootBoxSection" style={{height: '100vh'}}>
+      <div className="RecrootBoxSectionItem" style={{minheight: '20vh', padding: '30px'}}>
         {/* {this.state.data}  */}
         <h1>HackerRank</h1>
         <ul>
