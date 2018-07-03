@@ -4,8 +4,11 @@
   "private": true,
   "dependencies": {
     "react": "^16.4.1",
+    "react-bar-chart": "^0.1.2",
     "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "react-scrollable-list": "^1.2.0",
+    "recharts": "^1.0.0-beta.10"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import selfie from '../assets/selfie.jpeg'
-
+import { firstName, lastName, title, bio, email, gitHub, linkedIn, resume } from '../globalVariables';
 import '../App.css';
 
 class HeaderSection extends Component {
@@ -11,20 +11,18 @@ class HeaderSection extends Component {
           <img src={selfie} className="HS-Selfie" alt="selfie" />
           <hr/>
           <div className="HS-Name-Title-Block">
-          <h1 className="HS-Name">Trevor Lane</h1>
-          <h1 className="HS-Title">Student/
-                                   Developer</h1>
+          <h1 className="HS-Name">{firstName} {lastName}</h1>
+          <h2 className="HS-Title">{title}</h2>
           </div>
         </div> 
            <p className="HS-Bio"> 
-            {this.props.Bio}  
-            {this.props.SelfieUrl}
-        </p>
+            {bio}  
+           </p>
         <div className="HS-Links">
-            <a href="">Email</a>
-            <a href="">GitHub</a>
-            <a href="">LinkedIn</a>
-            <a href="">Resume</a>
+            <a href={email} >Email</a>
+            <a href={gitHub}>GitHub</a>
+            <a href={linkedIn}>LinkedIn</a>
+            <a href={resume}>Resume</a>
         </div>    
       </div>
     );

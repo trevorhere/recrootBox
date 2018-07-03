@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import repoNumShow from '../globalVariables';
+import { repoNumShow } from '../globalVariables';
+import ReactScrollableList from 'react-scrollable-list';
 // import './App.css';
 
 
+ 
   let times = [];
   let formatData = (data) => {
     for(let i = 0; i < data.length; i ++)
@@ -52,14 +54,17 @@ class  GHRepos extends Component {
     .catch(error => this.setState({error, isLoading: false}))
   }
 
+
   render() {
     formatData(this.state.data);
-    sortTimes(repoNumShow.repoNumShow);
+    sortTimes(repoNumShow);
+    console.log("Repos: ");
+    console.log(this.state.data);
  
     return (
       <div className="RecrootBoxSectionItem" style={{minheight: '20vh', padding: '30px'}}>
         {this.state.data.id}
-        <h1>Recent projects</h1>
+        <h1>Recent projects </h1>
         <ul>
         {
             times.map((item,index) => {
@@ -70,7 +75,8 @@ class  GHRepos extends Component {
                       </li>
                     )
             })}
-        </ul>          
+        </ul>   
+  
       </div>
     );
   }
@@ -80,9 +86,8 @@ class  GHRepos extends Component {
   // repos
   // stars
 
-  //webscrape from hacker rank 
-  // web scrape from free code camp
-  // leet code
-  // code chef
+  //view profile for hacker rank plus styling
+  // git up ui 
+  // 
 
  export default GHRepos ;
