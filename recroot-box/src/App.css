@@ -150,3 +150,36 @@
     border-color: black;
     box-shadow: 0px 15px 12px rgba(0,0,0,0.22);
   }
+
+
+  @media only screen and (max-width: 992px) {
+    
+    .PortfolioSectionItem {
+      max-width: 100%;
+      margin: 10%;
+      padding:10%;
+    }
+
+    .HS-Bio {
+      width: 80%;
+      padding: 20px;
+      font-size: 1em
+
+    }
+
+    .HS-Selfie-and-Name {
+      flex-direction: column;
+    }
+
+    .HS-Name-Title-Block {
+      text-align: center;
+      font-size: .75em;
+    }
+
+    .HS-Links {
+     padding: 20px;
+    }
+    
+
+
+  } 

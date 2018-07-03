@@ -4,6 +4,7 @@ import puppiesApp from './assets/puppies-app.jpg';
 import chuckNorris from './assets/chuck-norris.jpg';
 import ticTacToe from './assets/tic-tac-toe.jpg';
 import colorGame from './assets/color-game.jpg';
+import selfie from './assets/selfie.jpeg';
 
 let firstName = "Trevor";
 let lastName = "Lane";
@@ -66,5 +67,6 @@ export {
     linkedIn,
     gitHub,
     resume,
-    portfolioItems
+    portfolioItems,
+    selfie
 }
