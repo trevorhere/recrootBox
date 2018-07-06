@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import HeaderSection from './components/HeaderSection';
-import PortfolioSection from './components/PortfolioSection';
-import {bio, selfie} from './globalVariables.js'
-
-
-let SelfieUrl = "./assets/selfie.jpeg";          
+import PortfolioSection from './components/PortfolioSection'; 
+import FooterSection from './components/FooterSection';    
 
 class App extends Component {
   render() {
@@ -13,6 +10,7 @@ class App extends Component {
       <div>
         <HeaderSection />
         <PortfolioSection/>
+        <FooterSection/>
       </div>
     );
   }

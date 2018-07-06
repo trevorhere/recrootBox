@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import selfie from '../assets/selfie.jpeg'
-import { firstName, lastName, title, bio, email, gitHub, linkedIn, resume } from '../globalVariables';
+import { firstName, lastName, title, bio, selfie, links } from '../ProfileInformation';
 import '../App.css';
 
 class HeaderSection extends Component {
@@ -19,10 +18,11 @@ class HeaderSection extends Component {
             {bio}  
            </p>
         <div className="HS-Links">
-            <a href={email} >Email</a>
-            <a href={gitHub}>GitHub</a>
-            <a href={linkedIn}>LinkedIn</a>
-            <a href={resume}>Resume</a>
+        {links.map(function(item,index){
+                    return (
+                      <a key={index} href={item.link}>{item.name}</a>
+                    )
+                })}
         </div>    
       </div>
     );

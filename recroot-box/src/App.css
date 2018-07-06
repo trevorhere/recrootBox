@@ -22,17 +22,12 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 .HeaderSection {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .HS-Bio {
@@ -54,16 +49,47 @@
 .HS-Selfie {
   border-radius: 50%;
   padding: 20px;
+  max-width: 200px;
+}
+
+.HS-Links {
+  display: flex;
+  padding-top:3em;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
 }
 
 .HS-Links a {
+  color: black;
   align-self: center;
   text-decoration: none;
   padding:5px;
+}
 
+.HS-Links a:hover {
+  color: #003344;
+  align-self: center;
+  text-decoration: underline;
+  padding:5px;
 }
 
 .PortfolioSection {
+  display: flex;
+  flex-direction: column;
+  min-height:100vh;
+  min-width: 100vw;
+  background-color: #003344;
+  align-items: center;
+  margin: 0 auto;  
+}
+
+.PS-Title{
+  color:white;
+  padding-top:3em;
+}
+
+.PS-List{
   display: flex;
   flex-direction: row;
   min-height:100vh;
@@ -82,7 +108,6 @@
   margin: 30px;
   padding: 20px;
   max-width: 25%;
-
   background: white;
   width: 30vw;
   min-height: 30vh;
@@ -120,13 +145,16 @@
   top:0px;
   /*width:100%;*/
 }
+.PortfolioSection{
+  padding-bottom:0;
+  margin-bottom:0;
+}
 
 .PortfolioSectionItem button {
     font-family: 'Roboto', sans-serif;
     font-size: 32px;
     background-color: #003BB1;
     padding: 15px 32px;
-    
     text-align: center;
     font-size: 24px;
     border:none;
@@ -142,15 +170,25 @@
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
 
-  .RecrootBoxSectionItem {
-    background: white;
-    min-height: 30vh;
-    margin: 30px;
-    border:1px;
-    border-color: black;
-    box-shadow: 0px 15px 12px rgba(0,0,0,0.22);
-  }
-
+.FooterSection{
+  margin-top:0;
+  padding-top:0;
+  height: 10%;
+  background-color: black;
+  text-align: center;
+} 
+.FooterSection h3 {
+  padding:10px;
+  color:white;
+  margin:0;
+  font-size:1em;
+} 
+.FooterSection a {
+  color:white;
+}
+.FooterSection a:hover {
+  color:grey;
+}  
 
   @media only screen and (max-width: 992px) {
     
@@ -178,6 +216,7 @@
 
     .HS-Links {
      padding: 20px;
+     display: flex;
     }
     
 
