@@ -1,7 +1,7 @@
 # recrootBox
 Portfolio site template for those new to programming or development.
 
-#### To Start
+##### To Start
 1. Create a new repository on github
 2. Follow the example in [this link](https://help.github.com/articles/duplicating-a-repository/) to copy the code from this repository into your new repository
 3. Pull the code onto your computer
@@ -15,7 +15,8 @@ Portfolio site template for those new to programming or development.
 2. run `npm start`
 3. enjoy
 
-Alternatively, you can use [github Pages](https://pages.github.com/) as a free hosting platform. You can find Instructions [here.](https://medium.com/@_mariacheline/deploy-create-react-app-project-to-github-pages-2eb6deda5b89)
+#### Alternatively
+You can use [github Pages](https://pages.github.com/) as a free hosting platform. You can find Instructions [here.](https://medium.com/@_mariacheline/deploy-create-react-app-project-to-github-pages-2eb6deda5b89)
 
 
 [View Demo](http://trevorhere.github.io/recrootBox)
