@@ -4,8 +4,8 @@ Portfolio site template for those new to programming or development.
 ##### To Start
 1. Fork this repository onto your own github account
 2. Clone your new repository
-3. Open ```recrootBox/src/ProfileInformation.js``` and follow instructions in this file to add your information
-5. Add images to `recrootBox/src/assets`
+3. Add images to `recrootBox/src/assets`
+4. Open ```recrootBox/src/ProfileInformation.js``` and follow instructions in this file to add your information including your bio, image links, project titles, project links, etc.
 
 ##### To Finish - More experienced
 
