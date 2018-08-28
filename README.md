@@ -16,8 +16,8 @@ You have a few options:
 
 Running your own webserver:
 1. Clone your repository onto your hosting environment
-2. run `npm install`
-3. run `npm start`
+2. run `yarn install`
+3. run `yarn start`
 4. enjoy
  
 ### Option 2 (Some experience)
