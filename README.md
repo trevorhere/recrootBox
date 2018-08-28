@@ -10,7 +10,7 @@ Portfolio site template for those new to programming or development.
 
 ##### To Finish - More experienced
 
-1. upload files to your web server
+1. Clone your repository onto your hosting environment
 2. run `npm install`
 3. run `npm start`
 4. enjoy
