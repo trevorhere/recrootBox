@@ -14,8 +14,7 @@ Portfolio site template for those new to programming or development.
 2. run `npm install`
 3. run `npm start`
 4. enjoy
-
-#### Alternatively 
+ 
 - Less experienced
 
 You can use [github Pages](https://pages.github.com/) as a free hosting platform, to do this follow these [instructions.](https://medium.com/@_mariacheline/deploy-create-react-app-project-to-github-pages-2eb6deda5b89)
