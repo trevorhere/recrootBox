@@ -20,12 +20,12 @@ Running your own webserver:
 3. run `npm start`
 4. enjoy
  
-### Option 2 (Less experienced)
+### Option 2 (Some experience)
 
-You can use [github Pages](https://pages.github.com/) as a free hosting platform, to do so, follow these [instructions.](https://medium.com/@_mariacheline/deploy-create-react-app-project-to-github-pages-2eb6deda5b89)
+If you have access to a shared hosting environment, you can copy the contents of the `build` directory that is created from the instructions found in Option 2 to said hosting enviroment.
 
 ### Option 3 (Less experienced)
 
-If you have access to a shared hosting environment, you can copy the contents of the `build` directory that is created from the instructions found in Option 2 to said hosting enviroment.
+You can use [github Pages](https://pages.github.com/) as a free hosting platform, to do so, follow these [instructions.](https://medium.com/@_mariacheline/deploy-create-react-app-project-to-github-pages-2eb6deda5b89)
 
 [View Demo](http://trevorhere.github.io/recrootBox)
