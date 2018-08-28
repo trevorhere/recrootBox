@@ -5,9 +5,9 @@ Portfolio site template for those new to programming or development.
 1. Create a new repository on github
 2. Follow the example in [this link](https://help.github.com/articles/duplicating-a-repository/) to copy the code from this repository into your new repository
 3. Pull the code onto your computer
-4. Open recrootBox/src/ProfileInformation.js
+4. Open `recrootBox/src/ProfileInformation.js`
 4. Fill in the suggested data as instructed in the file
-5. Add images to recrootBox/src/assets
+5. Add images to `recrootBox/src/assets`
 
 ##### To Finish
 
