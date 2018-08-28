@@ -22,7 +22,7 @@ Running your own webserver:
  
 ### Option 2 (Some experience)
 
-If you have access to a shared hosting environment, you can copy the contents of the `build` directory that is created from the instructions found in Option 3 to said hosting enviroment.
+If you have access to a shared hosting environment, you can copy the contents of the `build` directory that is created from the following these [instructions](https://medium.com/@_mariacheline/deploy-create-react-app-project-to-github-pages-2eb6deda5b89) into your hosting enviroment.
 
 ### Option 3 (Less experienced)
 
