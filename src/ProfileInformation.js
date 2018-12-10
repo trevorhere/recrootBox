@@ -1,7 +1,7 @@
 
 // Import image of your self here:
 //-- For best display purposes, your image should be sqaure (e.g. 300 X 300 px)
-import selfie from './assets/cat.jpg';
+import selfie from './assets/trevor.png';
 
 //Import images for your portfolio here:
 //-- For best display purposes, each of these images should have similar porportions
@@ -11,83 +11,103 @@ import example3   from './assets/code.jpeg';
 import example4   from './assets/code.jpeg';
 import example5   from './assets/code.jpeg';
 import example6   from './assets/code.jpeg';
+import chuckNorris   from './assets/chuck-norris.jpg';
+import ticTacToe   from './assets/tic-tac-toe.jpg';
+
+import recrootBox from './assets/recrootBox_site.png';
+import campRank   from './assets/camprank_site.png';
+import blogApp   from './assets/blogapp-site.png';
+import taskyv from './assets/taskyv_site.png';
+
+import resume from './assets/Resume.pdf';
+
+
+
 
 //Edit portfolio items here by changing title, image title, and link
 // -- you can adjust the number of items as needed. For display purposes, it's best to use
-// -- multiples of 3. 
+// -- multiples of 3.
 let portfolioItems = [
-  { 
-    imageUrl: example1, 
-    title: "Example One",
-    link: "#"
+  {
+    imageUrl: taskyv,
+    title: "Taskyv",
+    description: "Sleek, sexy task manager",
+    link: "https://taskyv.herokuapp.com/"
   },
-  { 
-    imageUrl: example2, 
-    title: "Example Two",
-    link: "#"
+  {
+    imageUrl: recrootBox,
+    title: "Recroot Box",
+    description:"Easy to user porfolio-site template",
+    link: "https://trevorhere.github.io/recrootBox/"
   },
-  { 
-    imageUrl: example3, 
-    title: "Example Three",
-    link: "#"
+  {
+    imageUrl: campRank,
+    title: "CampRank",
+    description: "Post, rank and comment about your favorite campsites",
+    link: "https://desolate-falls-89173.herokuapp.com/"
   },
-  { 
-    imageUrl: example4, 
-    title: "Example Four",
-    link: "#"
+  {
+    imageUrl: blogApp,
+    title: "Blog App",
+    description: "Easy access blog app.",
+    link: "https://boiling-harbor-27900.herokuapp.com"
   },
-  { 
-    imageUrl: example5, 
-    title: "Example Five",
-    link: "#"
-  },
-  { 
-    imageUrl: example6, 
-    title: "Example Six",
-    link: "#"
-  },
+  // {
+  //   imageUrl: chuckNorris,
+  //   title: "Chuck Norris Quote Fetcher",
+  //   link: "#"
+  // },
+  // {
+  //   imageUrl: ticTacToe,
+  //   title: "Tic Tac Toe",
+  //   link: "#"
+  // },
 ]
 
 
 // Edit person info here
 // -- Bio is best kept to around 5 lines
-let firstName = "Mr.";
-let lastName = "Cat";
-let title = "Cat / Mouse Hunter";
-let bio = "The domestic cat (Felis silvestris catus or Felis catus)[1][5] is a small, typically furry, carnivorous mammal. They are often called house cats[6] when kept as indoor pets or simply cats when there is no need to distinguish them from other felids and felines. They are often valued by humans for companionship and for their ability to hunt vermin. There are more than seventy cat breeds recognized by various cat registries." ;
+let firstName = "Trevor";
+let lastName = "Lane";
+let title = "Student / Developer";
+let bio = "Hey there, I'm a computer science student at Brigham Young University in Provo, Utah. I like to build web applications using javascript based tech like React.js Node.js and MongoDB." +
+
+" Feel free to take a look at some things i've built here or checkout my code on github."
 
 
 //Edit links to external accounts or items here (e.g. github, linkedIn, leetcode, resume, etc.)
 // -- For display purposes, it's best to use between 3 and 5 links, but if you add more or less,
-// -- the page will adjust accordingly. 
+// -- the page will adjust accordingly.
 let links = [
-  { 
-    name: "exampleLink1",
-    link:"exampleLink1.com"
+  {
+    name: "Email",
+    link:"mailto:trevor@trevorlane.net"
   },
   {
-    name: "exampleLink2",
-    link: "exampleLink2.com"
+    name: "GitHub",
+    link: "https://github.com/trevorhere"
   },
   {
-    name: "exampleLink3",
-    link: "exampleLink3.com"
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/trevor-lane-8615a9106/"
   },
   {
-    name: "exampleLink4",
-    link: "exampleLink4.com"
+    name: "Resume",
+    link: resume
   },
 ]
 
 // If you do not want the footer to be displayed (it just has a link to the github repo
-// -- for this template ) then you can set showFooter to false and it will go away. 
+// -- for this template ) then you can set showFooter to false and it will go away.
 let showFooter = true;
+
+
 
 export {
     firstName,
-    lastName, 
+    lastName,
     title,
-    bio, 
+    bio,
     portfolioItems,
     selfie,
     showFooter,

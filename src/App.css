@@ -30,6 +30,13 @@
   min-height: 100vh;
 }
 
+.HS-Title  {
+  color: #878787;
+  font-size: 2.22rem;
+  letter-spacing: .08rem;
+  font-weight: 300;
+}
+
 .HS-Bio {
   font-size: 1.5em;
   text-align: justify;
@@ -39,11 +46,15 @@
 }
 
 
+
 .HS-Selfie-and-Name {
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   margin: 0 auto;  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 2rem;
+  letter-spacing: .08rem;
+  font-weight: 500;
 }
 
 .HS-Selfie {
@@ -57,23 +68,22 @@
   padding-top:3em;
   flex-wrap: wrap;
   justify-content: space-around;
-
+  font-weight: bold;
 }
 
 .HS-Links a {
-  color: black;
+  color: grey;
   align-self: center;
   text-decoration: none;
   padding:5px;
 }
 
 .HS-Links a:hover {
-  color: #003344;
+  color: #222;
   align-self: center;
-  text-decoration: underline;
+  text-decoration:none;
   padding:5px;
 }
-
 .PortfolioSection {
   display: flex;
   flex-direction: column;
@@ -81,13 +91,18 @@
   min-width: 100vw;
   background-color: #003344;
   align-items: center;
-  margin: 0 auto;  
+  margin: 0 auto;
+  padding-bottom:0;
+  margin-bottom:0;
 }
 
 .PS-Title{
+  text-align: center;
   color:white;
-  padding-top:3em;
+  padding:1em;
 }
+
+
 
 .PS-List{
   display: flex;
@@ -96,7 +111,7 @@
   min-width: 100vw;
   background-color: #003344;
   align-items: center;
-  margin: 0 auto;  
+  margin: 0 auto;
   justify-content: space-around;
   flex-wrap: wrap;
   flex-basis: 20%;
@@ -104,17 +119,17 @@
 }
 
 .PortfolioSectionItem {
-  flex: 1 0 25%;
-  margin: 30px;
-  padding: 20px;
-  max-width: 25%;
-  background: white;
-  width: 30vw;
-  min-height: 30vh;
+  width: 400px;
+  height: 300px;
   margin: 30px;
   border:1px;
   border-color: black;
   box-shadow: 0px 15px 12px rgba(0,0,0,0.22);
+  max-width: 30vw;
+}
+
+.portfolio-item{
+  min-width: 30vw;
 }
 
 .SliderContainer {
@@ -123,10 +138,10 @@
   overflow: hidden;
   position: relative;
   font-weight: 200;
+  width: 100%;
 }
 
 .SliderItem {
-  border-color: #ff0055;
   border-width: 0px;
   border-style: solid;
   height: 100%;
@@ -143,12 +158,8 @@
   color:white;
   overflow: hidden;
   top:0px;
-  /*width:100%;*/
 }
-.PortfolioSection{
-  padding-bottom:0;
-  margin-bottom:0;
-}
+
 
 .PortfolioSectionItem button {
     font-family: 'Roboto', sans-serif;
@@ -176,27 +187,26 @@
   height: 10%;
   background-color: black;
   text-align: center;
-} 
+}
 .FooterSection h3 {
   padding:10px;
   color:white;
   margin:0;
   font-size:1em;
-} 
+}
 .FooterSection a {
   color:white;
 }
 .FooterSection a:hover {
   color:grey;
-}  
+}
 
-  @media only screen and (max-width: 992px) {
-    
-    .PortfolioSectionItem {
-      max-width: 100%;
-      margin: 10%;
-      padding:10%;
-    }
+   @media only screen and (max-width: 992px) {
+
+
+    /* .PortfolioSectionItem {
+      max-width: 80vw;
+    } */
 
     .HS-Bio {
       width: 80%;
@@ -209,6 +219,14 @@
       flex-direction: column;
     }
 
+    .HS-Selfie {
+      padding: 0;
+    }
+
+    .HS-Bio {
+      padding: 0;
+    }
+
     .HS-Name-Title-Block {
       text-align: center;
       font-size: .75em;
@@ -218,7 +236,7 @@
      padding: 20px;
      display: flex;
     }
-    
 
 
-  } 
+
+  }
