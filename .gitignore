@@ -1,8 +1,4 @@
 node_modules
-public
-src
 package-lock.json
-package.json
-yarn.lock
 .env
 publish.sh

@@ -1,0 +1,23 @@
+{
+  "name": "TL",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://trevorlane.net/",
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-bar-chart": "^0.1.2",
+    "react-dom": "^16.4.1",
+    "react-fullpage": "^0.1.19",
+    "react-materialize": "^2.5.0",
+    "react-scripts": "1.1.4",
+    "react-scroll-parallax": "^2.1.2",
+    "react-scrollable-list": "^1.2.0",
+    "recharts": "^1.0.0-beta.10"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
