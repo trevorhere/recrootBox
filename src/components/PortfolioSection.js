@@ -1,13 +1,17 @@
 import React, { Component } from "react";
-import { portfolioItems } from "../ProfileInformation";
+import { portfolioTitle, portfolioItems, portfolioSectionBackgroundColor } from "../ProfileInformation";
 import { Card, CardTitle, Button, Col, Row } from "react-materialize";
+
+const PSListStyles =  {
+  backgroundColor: portfolioSectionBackgroundColor
+}
 
 class PortfolioSection extends Component {
   render() {
     return (
-      <div className="PortfolioSection">
-        <h1 className="PS-Title">Recent Projects</h1>
-        <div className="PS-List">
+      <div className="PortfolioSection" style={PSListStyles} >
+        <h1 className="PS-Title">{portfolioTitle}</h1>
+        <div  style={PSListStyles}  className="PS-List">
           <Row children={2}>
             {portfolioItems.map((item, index) => {
               return (

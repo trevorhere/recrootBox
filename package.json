@@ -8,6 +8,7 @@
     "react-bar-chart": "^0.1.2",
     "react-dom": "^16.4.1",
     "react-fullpage": "^0.1.19",
+    "react-icons": "^3.7.0",
     "react-materialize": "^2.5.0",
     "react-scripts": "1.1.4",
     "react-scroll-parallax": "^2.1.2",

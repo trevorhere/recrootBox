@@ -1,3 +1,5 @@
+
+import { FaGithub, FaLinkedin, FaEnvelope, FaFileAlt } from "react-icons/fa";
 // Import image of your self here:
 //-- For best display purposes, your image should be sqaure (e.g. 300 X 300 px)
 import selfie from "./assets/trevor.png";
@@ -16,6 +18,9 @@ import resume from "./assets/Resume.pdf";
 //Edit portfolio items here by changing title, image title, and link
 // -- you can adjust the number of items as needed. For display purposes, it's best to use
 // -- multiples of 3.
+
+let portfolioTitle = "Recent Projects"
+let portfolioSectionBackgroundColor = "#003344"
 let portfolioItems = [
   {
     imageUrl: taskyv,
@@ -73,22 +78,32 @@ let bio = `Hey there, I'm currently studying computer science
 //Edit links to external accounts or items here (e.g. github, linkedIn, leetcode, resume, etc.)
 // -- For display purposes, it's best to use between 3 and 5 links, but if you add more or less,
 // -- the page will adjust accordingly.
+
+let userIcons = true;
+
 let links = [
   {
     name: "Email",
-    link: "mailto:trevor@trevorlane.net"
+    link: "mailto:trevor@trevorlane.net",
+    icon: FaEnvelope
   },
   {
     name: "GitHub",
-    link: "https://github.com/trevorhere"
+    link: "https://github.com/trevorhere",
+    icon: FaGithub
+
   },
   {
     name: "LinkedIn",
-    link: "https://www.linkedin.com/in/trevor-lane-8615a9106/"
+    link: "https://www.linkedin.com/in/hi-there-trevor-here/",
+    icon: FaLinkedin
+
   },
   {
     name: "Resume",
-    link: resume
+    link: resume,
+    icon: FaFileAlt
+
   }
 ];
 
@@ -101,8 +116,11 @@ export {
   lastName,
   title,
   bio,
+  portfolioTitle,
   portfolioItems,
+  portfolioSectionBackgroundColor,
   selfie,
   showFooter,
-  links
+  links,
+  userIcons
 };

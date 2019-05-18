@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import { Parallax } from "react-scroll-parallax";
+import { FaBolt } from "react-icons/fa";
+import { Card, CardTitle, Button, Col, Row } from "react-materialize";
+
+
 
 import {
   firstName,
@@ -7,15 +10,23 @@ import {
   title,
   bio,
   selfie,
-  links
+  links,
+  userIcons
 } from "../ProfileInformation";
 import "../App.css";
 
+
+
+
 class HeaderSection extends Component {
+
+
   render() {
+
     return (
-      // <Parallax className="custom-class" y={[-30, 30]} tagOuter="figure">
+      <div>
       <div className="HeaderSection">
+              
         <div className="HS-Selfie-and-Name">
           <img src={selfie} className="HS-Selfie" alt="selfie" />
           <hr />
@@ -30,14 +41,14 @@ class HeaderSection extends Component {
         <div className="HS-Links">
           {links.map(function(item, index) {
             return (
-              <a key={index} href={item.link}>
-                {item.name}
+              <a key={index}  href={item.link}>
+                { !userIcons ? item.name : ( item.icon ? <item.icon className="link-icon" /> : <FaBolt className="link-icon"/>   ) }
               </a>
             );
           })}
         </div>
       </div>
-      // </Parallax>
+      </div>
     );
   }
 }

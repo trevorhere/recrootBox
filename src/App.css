@@ -55,6 +55,12 @@
   font-weight: bold;
 }
 
+.link-icon {
+  height: 1.3em;
+  width: 1.3em;
+  margin:0 .4em;
+}
+
 .HS-Links a {
   color: grey;
   align-self: center;
@@ -62,7 +68,8 @@
   padding: 5px;
 }
 
-.HS-Links a:hover {
+.HS-Links a:hover  {
+  cursor:'pointer';
   color: #222;
   align-self: center;
   text-decoration: none;
@@ -72,7 +79,6 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #003344;
   align-items: center;
   margin: 0 auto;
   padding-bottom: 0;
@@ -92,7 +98,6 @@
   display: flex;
   flex-direction: row;
   min-height: 100vh;
-  background-color: #003344;
   align-items: center;
   margin: 0 auto;
   justify-content: space-around;
@@ -101,33 +106,6 @@
   padding: 0 50px;
 }
 
-.SliderContainer {
-  display: inline-block;
-  padding: 0px;
-  overflow: hidden;
-  position: relative;
-  font-weight: 200;
-  width: 100%;
-}
-
-.SliderItem {
-  border-width: 0px;
-  border-style: solid;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-  top: 1000px;
-  padding: 15px 20px;
-  transition: 0.1s;
-  background: rgba(32, 32, 32, 0.9);
-}
-
-.SliderContainer:hover .SliderItem {
-  color: white;
-  overflow: hidden;
-  top: 0px;
-}
 
 .PortfolioSectionItem button {
   font-family: "Roboto", sans-serif;
@@ -177,7 +155,11 @@
     justify-content: center;
     min-height: 100%;
     position: relative;
+    z-index: 0;
+
   }
+
+
   .PortfolioSection {
     display: flex;
     flex-direction: column;
@@ -189,7 +171,8 @@
     margin-bottom: 0;
     margin-top: 0;
     position: relative;
-    z-index: 1000;
+    z-index: 0;
+
   }
 
   .HS-Title {
@@ -207,6 +190,7 @@
 
   .HS-Selfie-and-Name {
     flex-direction: column;
+    margin-top: 10%
   }
 
   .HS-Selfie {
@@ -223,6 +207,11 @@
   }
 
   .HS-Links {
+    padding: 20px;
+    display: flex;
+  }
+  .HS-Links a {
+    z-index: 0;
     padding: 20px;
     display: flex;
   }
