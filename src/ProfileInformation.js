@@ -15,54 +15,6 @@ import bookThinks from "./assets/bookThinks.png";
 
 import resume from "./assets/Resume.pdf";
 
-//Edit portfolio items here by changing title, image title, and link
-// -- you can adjust the number of items as needed. For display purposes, it's best to use
-// -- multiples of 3.
-
-let portfolioTitle = "Recent Projects"
-let portfolioSectionBackgroundColor = "#003344"
-let portfolioItems = [
-  {
-    imageUrl: taskyv,
-    title: "Taskyv",
-    description: "Sleek, sexy task manager",
-    link: "https://taskyv.herokuapp.com/"
-  },
-  {
-    imageUrl: bookThinks,
-    title: "BookThinks",
-    description: "Book-centric note recorder",
-    link: "https://bookthinks.herokuapp.com/"
-  },
-  {
-    imageUrl: recrootBox,
-    title: "Recroot Box",
-    description: "Easy to user porfolio-site template",
-    link: "https://trevorhere.github.io/recrootBox/"
-  },
-  {
-    imageUrl: campRank,
-    title: "CampRank",
-    description: "Post, rank and comment about your favorite campsites",
-    link: "https://desolate-falls-89173.herokuapp.com/"
-  },
-  {
-    imageUrl: blogApp,
-    title: "Blog App",
-    description: "Easy access blog app.",
-    link: "https://boiling-harbor-27900.herokuapp.com"
-  }
-  // {
-  //   imageUrl: chuckNorris,
-  //   title: "Chuck Norris Quote Fetcher",
-  //   link: "#"
-  // },
-  // {
-  //   imageUrl: ticTacToe,
-  //   title: "Tic Tac Toe",
-  //   link: "#"
-  // },
-];
 
 // Edit person info here
 // -- Bio is best kept to around 5 lines
@@ -106,6 +58,46 @@ let links = [
 
   }
 ];
+
+//Edit portfolio items here by changing title, image title, and link
+// -- you can adjust the number of items as needed. For display purposes, it's best to use
+// -- multiples of 3.
+
+let portfolioTitle = "Recent Projects"
+let portfolioSectionBackgroundColor = "#003344"
+let portfolioItems = [
+  {
+    imageUrl: taskyv,
+    title: "Taskyv",
+    description: "Sleek, sexy task manager",
+    link: "https://taskyv.herokuapp.com/"
+  },
+  {
+    imageUrl: bookThinks,
+    title: "BookThinks",
+    description: "Book-centric note recorder",
+    link: "https://bookthinks.herokuapp.com/"
+  },
+  {
+    imageUrl: recrootBox,
+    title: "Recroot Box",
+    description: "Easy to user porfolio-site template",
+    link: "https://trevorhere.github.io/recrootBox/"
+  },
+  {
+    imageUrl: campRank,
+    title: "CampRank",
+    description: "Post, rank and comment about your favorite campsites",
+    link: "https://desolate-falls-89173.herokuapp.com/"
+  },
+  {
+    imageUrl: blogApp,
+    title: "Blog App",
+    description: "Easy access blog app.",
+    link: "https://boiling-harbor-27900.herokuapp.com"
+  }
+];
+
 
 // If you do not want the footer to be displayed (it just has a link to the github repo
 // -- for this template ) then you can set showFooter to false and it will go away.
