@@ -1,6 +1,7 @@
 # recrootBox
 
 Portfolio site template for those new to web development.
+Step by step instructions can be found [here](https://www.youtube.com/watch?v=tz04HiWaPfc)
 
 ## Installation
 
