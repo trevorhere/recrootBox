@@ -16,6 +16,14 @@
   z-index: -99;
 }
 
+
+.HeaderSection .Switch {
+  text-emphasis: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
 .HS-Title {
   color: #878787;
   font-size: 2.22rem;

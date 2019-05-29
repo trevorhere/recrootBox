@@ -15,6 +15,7 @@ import bookThinks from "./assets/bookThinks.png";
 
 import resume from "./assets/Resume.pdf";
 
+let darkModeSwitch = true;
 
 // Edit person info here
 // -- Bio is best kept to around 5 lines
@@ -114,5 +115,6 @@ export {
   selfie,
   showFooter,
   links,
-  userIcons
+  userIcons,
+  darkModeSwitch
 };
