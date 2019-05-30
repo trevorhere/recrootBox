@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { FaBolt, FaLightbulb, FaRegLightbulb } from "react-icons/fa";
-import { Card, CardTitle, Button, Col, Row, Switch, Icon } from "react-materialize";
+import { Switch } from "react-materialize";
 
 import {
   firstName,
@@ -10,7 +10,7 @@ import {
   selfie,
   links,
   userIcons,
-  darkModeSwitch
+  darkModeSwitch,
 } from "../ProfileInformation";
 import "../App.css";
 
@@ -21,35 +21,20 @@ let darkStyle = {
 };
 
 class HeaderSection extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      darkMode: false
-    }
-  }
-
-
-
-
-
-
   render() {
 
-
-
-
-    let darkModeStyle = this.state.darkMode ?
+    let darkModeStyle = this.props.darkMode ?
       darkStyle : {};
-
 
     return (
       <div className="HeaderSection" style={darkModeStyle}>
         {darkModeSwitch ? (
           <div className="Switch">
-            <Switch onChange={() => { this.setState({ darkMode: !this.state.darkMode }) }} offLabel='' onLabel='' />
+            <Switch onChange={this.props.onSwitch} offLabel='' onLabel='' />
           </div>
         ) : <div></div>}
         <div className="HS-Selfie-and-Name">
+          {this.props.test}
           <img src={selfie} className="HS-Selfie" alt="selfie" />
           <div className="HS-Name-Title-Block">
             <h1 className="HS-Name"  >
