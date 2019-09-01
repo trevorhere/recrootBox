@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { FaBolt, FaLightbulb, FaRegLightbulb } from "react-icons/fa";
-import { Switch } from "react-materialize";
+import { Link } from "react-router-dom"
+
+import { Switch, Button } from "react-materialize";
 
 import {
   firstName,
@@ -28,6 +30,10 @@ class HeaderSection extends Component {
 
     return (
       <div className="HeaderSection" style={darkModeStyle}>
+        <div className="PostsLink">
+         <Button flat><Link to="/blog">Posts</Link></Button>
+        </div>
+
         {darkModeSwitch ? (
           <div className="Switch">
             <Switch onChange={this.props.onSwitch} offLabel='' onLabel='' />

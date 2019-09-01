@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import '../App.css';
 import ReactMarkdown from 'react-markdown';
+import { Card, CardTitle, CardPanel, Button, Row, Col } from "react-materialize";
+import { Link } from "react-router-dom"
+
+
 
 class Blog extends Component {
   constructor(props){
@@ -10,6 +14,26 @@ class Blog extends Component {
       isLoaded: false,
       files: []
     }
+  }
+
+  postLink={
+    width:'100%',
+    margin:'0 auto'
+
+  }
+
+  blog={
+    display:'flex',
+    alignItems:'center',
+    justifyContent:'center',
+    paddingTop: '10%'
+  }
+  posts={
+    width:'75%',
+  }
+
+  translateTitle(title){
+    return (title.substr(0,(title.length - 3)).split('_').join(' '))
   }
 
   componentDidMount(){
@@ -23,7 +47,7 @@ class Blog extends Component {
         var fileName = fileNames[i];
         let content = data.files[fileName].content
     
-        files.push(`${content}`);
+        files.push({"filename":`${fileName}`, "content":`${content}`});
       }
       this.setState({ 
         isLoaded: true, 
@@ -37,24 +61,6 @@ class Blog extends Component {
     })  
   }
 
-  renderPosts = ({files}) => {
-
-
-    let i;
-    for( i = 0; i < files.length; i++){
-      console.log('length', files.length)
-      console.log('i: ', i)
-      console.log('filename: ', files[i].filename)
-      return (<div key={i}>{files[i].filename}: {files[i].content}</div>)
-    }	
-    // for(let i = 0; i < files.length; i++){
-    //   console.log('length', files.length)
-    //   console.log('i: ', i)
-    //   console.log('filename: ', files[i].filename)
-    //   return (<div>{files[i].filename}: {files[i].content}</div>)
-    // }
-  }
-
   render() {
     const { error, isLoaded, files } = this.state;
     console.log('files_state: ', files)
@@ -64,9 +70,20 @@ class Blog extends Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <div className="BlogSection">
-          <h1>.</h1>
-          {files.map(item => {return <ReactMarkdown source={item} />})}
+        <div style={this.blog}>
+        <div style={this.posts} className="Blog">
+            <h3>Posts</h3>
+              {files.map(item => { 
+                return (
+                <div style={this.postLink}>
+                  <hr className="Divider Grey"/>
+                  <div  className="PostLink"><b><a  href={`/blog/${item.filename}/68cc754fb298f3121b5b2b4cfaa754d4`} >{this.translateTitle(item.filename)}</a></b></div>
+                  {/* <ReactMarkdown source={item.content} /> */}
+                </div>
+                )
+              })
+              }
+          </div>
         </div>
       );
     }
