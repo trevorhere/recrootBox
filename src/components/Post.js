@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 
 
 class Post extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
       error: null,
@@ -16,6 +16,7 @@ class Post extends Component {
     }
   }
 
+<<<<<<< HEAD
   blog={
     display:'flex',
     alignItems:'center',
@@ -54,31 +55,43 @@ class Post extends Component {
 
   translateTitle(title){
     return (title.substr(0,(title.length - 3)).split('_').join(' '))
+=======
+  blog = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: '10%'
+>>>>>>> fd42e7fc5754f9652fd9b497c32bbb8393f3b9c8
   }
 
-  componentDidMount(){
+  translateTitle(title) {
+    return (title.substr(0, (title.length - 3)).split('_').join(' '))
+  }
+
+  componentDidMount() {
 
     const targetFile = this.props.match.params.file_name
     fetch(`https://api.github.com/gists/68cc754fb298f3121b5b2b4cfaa754d4`)
-    .then(response =>  response.json())
-    .then(data => {
-      let post = {"filename": targetFile, "content": data.files[targetFile].content}
-      this.setState({ 
-        isLoaded: true, 
-        post
+      .then(response => response.json())
+      .then(data => {
+        let post = { "filename": targetFile, "content": data.files[targetFile].content }
+        this.setState({
+          isLoaded: true,
+          post
+        })
+      }, (error) => {
+        this.setState({
+          isLoaded: true,
+          error
+        });
       })
-    },(error) => {
-      this.setState({
-        isLoaded: true,
-        error
-      });
-    })  
   }
 
   render() {
     const { error, isLoaded, post } = this.state;
-    if(error){
+    if (error) {
       return <div>Error: {error.message}</div>;
+<<<<<<< HEAD
     } else if (!isLoaded){
       return ( 
       <Preloader style={this.preLoader}  size="small" />
@@ -96,6 +109,18 @@ class Post extends Component {
 
         {/* <Button right styles={{left:"0px"}} flat><Link to="/blog">Posts</Link></Button> */}
 
+=======
+    } else if (!isLoaded) {
+      return <div>Loading...</div>;
+    } else {
+      return (
+        <div style={this.blog} >
+          <div style={this.post} >
+            <h4>{this.translateTitle(post.filename)}</h4>
+            <Button right styles={{ left: "0px" }} flat><Link to="/blog">Posts</Link></Button>
+            <ReactMarkdown source={post.content} />
+          </div>
+>>>>>>> fd42e7fc5754f9652fd9b497c32bbb8393f3b9c8
         </div>
       );
     }
