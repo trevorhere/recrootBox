@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import '../App.css';
-import ReactMarkdown from 'react-markdown';
-import { Card, CardTitle, CardPanel, Button, Row, Col } from "react-materialize";
+import { Preloader } from "react-materialize";
 import { Link } from "react-router-dom"
 
 
 
-class Blog extends Component {
+class PostList extends Component {
   constructor(props){
     super(props)
     this.state = {
@@ -32,6 +31,15 @@ class Blog extends Component {
     width:'75%',
   }
 
+  headerLink ={
+    backgroundColor: "#fff",
+    textEmphasis: "center",
+    position: "absolute",
+    top: "30px",
+    right: "30px"
+  }
+
+
   translateTitle(title){
     return (title.substr(0,(title.length - 3)).split('_').join(' '))
   }
@@ -41,7 +49,6 @@ class Blog extends Component {
     .then(response =>  response.json())
     .then(data => {
       let files = []
-      // Loop through files
       const fileNames = Object.keys(data.files);
       for (let i = 0; i < fileNames.length; i++) {
         var fileName = fileNames[i];
@@ -67,18 +74,18 @@ class Blog extends Component {
     if(error){
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded){
-      return <div>Loading...</div>;
+      return <Preloader style={this.preLoader}  size="small" />
     } else {
       return (
         <div style={this.blog}>
-        <div style={this.posts} className="Blog">
+        <div style={this.posts} >
+          <Link  style={this.headerLink} to='/'>HOME </Link>
             <h3>Posts</h3>
               {files.map(item => { 
                 return (
                 <div style={this.postLink}>
                   <hr className="Divider Grey"/>
-                  <div  className="PostLink"><b><a  href={`/blog/${item.filename}/68cc754fb298f3121b5b2b4cfaa754d4`} >{this.translateTitle(item.filename)}</a></b></div>
-                  {/* <ReactMarkdown source={item.content} /> */}
+                  <div  className="PostLink"><b><a  href={`/posts/${item.filename}/68cc754fb298f3121b5b2b4cfaa754d4`} >{this.translateTitle(item.filename)}</a></b></div>
                 </div>
                 )
               })
@@ -90,4 +97,4 @@ class Blog extends Component {
   }
 }
 
-export default Blog;
+export default PostList;

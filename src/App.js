@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import "./App.css";
-import Blog from "./components/Blog";
+import PostList from "./components/PostList";
 import Home from "./components/Home"
 import Post from "./components/Post"
 
@@ -15,8 +15,8 @@ class App extends Component {
     return (
       <Router>
         <Route path="/" exact component={Home} />
-        <Route path="/blog" exact component={Blog} />
-        <Route path="/blog/:file_name/:gist_id"  component={Post} />
+        <Route path="/posts" exact component={PostList} />
+        <Route path="/posts/:file_name/:gist_id"  component={Post} />
       </Router>
     );
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import ReactMarkdown from 'react-markdown';
-import { Card, CardTitle, CardPanel, Button, Row, Col } from "react-materialize";
+import { Preloader } from "react-materialize";
 import { Link } from "react-router-dom"
 
 
@@ -14,6 +14,42 @@ class Post extends Component {
       isLoaded: false,
       post: []
     }
+  }
+
+  blog={
+    display:'flex',
+    alignItems:'center',
+    justifyContent:'center',
+    paddingTop: '10%',
+    paddingBottom: '10%',
+  }
+
+  homeLink ={
+    color:"black",
+    textEmphasis: "center",
+    position: "absolute",
+    top: "30px",
+    right: "100px"
+  }
+
+  homeLink:hover = {
+    
+  }
+
+  postLink ={
+    color:"black",
+    textEmphasis: "center",
+    position: "absolute",
+    top: "30px",
+    right: "30px"
+  }
+
+  preLoader={
+
+  }
+
+  post={
+    width:'75%',
   }
 
   translateTitle(title){
@@ -44,24 +80,22 @@ class Post extends Component {
     if(error){
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded){
-      return <div>Loading...</div>;
-    } else {
+      return ( 
+      <Preloader style={this.preLoader}  size="small" />
+      )
+    }  else {
       return (
-        <div className="Blog">
-          <div className="PostList">
-          <Row>
-            <Col l={6}>
-              <h4>{this.translateTitle(post.filename)}</h4>
-            </Col>
-            <Col l={6}>
-              <Button right styles={{left:"0px"}} flat><Link to="/blog">Posts</Link></Button>
-            </Col>
-
-
-          </Row>
-
+        <div style={this.blog}>
+          <Link style={this.homeLink} to='/'>HOME </Link>
+          <Link style={this.postLink} to='/posts'>POSTS </Link>
+          <div style={this.post}>
+          <h3>{this.translateTitle(post.filename)}</h3>
+          <hr/>
           <ReactMarkdown source={post.content} />
         </div>
+
+        {/* <Button right styles={{left:"0px"}} flat><Link to="/blog">Posts</Link></Button> */}
+
         </div>
       );
     }

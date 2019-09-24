@@ -22,7 +22,19 @@ let darkStyle = {
   backgroundColor: 'black',
 };
 
+
+
 class HeaderSection extends Component {
+
+  headerLink ={
+    backgroundColor: "#fff",
+    textEmphasis: "center",
+    position: "absolute",
+    top: "30px",
+    right: "30px"
+  }
+
+
   render() {
 
     let darkModeStyle = this.props.darkMode ?
@@ -30,10 +42,7 @@ class HeaderSection extends Component {
 
     return (
       <div className="HeaderSection" style={darkModeStyle}>
-        <div className="PostsLink">
-         <Button flat><Link to="/blog">Posts</Link></Button>
-        </div>
-
+        <Link style={this.headerLink} to='/posts'>POSTS</Link>
         {darkModeSwitch ? (
           <div className="Switch">
             <Switch onChange={this.props.onSwitch} offLabel='' onLabel='' />
