@@ -12,6 +12,7 @@ import campRank from "./assets/camprank_site.png";
 import blogApp from "./assets/blogapp-site.png";
 import taskyv from "./assets/taskyv_site.png";
 import bookThinks from "./assets/bookThinks.png";
+import puppy from "./assets/puppy.png";
 
 import resume from "./assets/Resume.pdf";
 
@@ -22,12 +23,10 @@ let darkMode = false;
 // -- Bio is best kept to around 5 lines
 let firstName = "Trevor";
 let lastName = "Lane";
-let title = "Student / Software Developer";
-let bio = `Hey there, I'm currently studying computer science
-   at Brigham Young University and working as a Software
-   Engineering Intern at SimpleNexus.
-   Feel free to reach out, take a look at some things i've built
-   here, or checkout my code on github.`;
+let title = "Student / Software Engineer";
+let bio = `Currently studying Computer Science at Brigham Young Universirty and working as a software engineering intern at a company called SimpleNexus where I work with Vue.js & Rails. 
+
+Feel free to check out some of my past projects below, browse some code on my github profile, or just reach out to say hi!`;
 
 //Edit links to external accounts or items here (e.g. github, linkedIn, leetcode, resume, etc.)
 // -- For display purposes, it's best to use between 3 and 5 links, but if you add more or less,
@@ -103,7 +102,7 @@ let portfolioItems = [
 
 // If you do not want the footer to be displayed (it just has a link to the github repo
 // -- for this template ) then you can set showFooter to false and it will go away.
-let showFooter = true;
+let showFooter = false;
 
 export {
   firstName,
