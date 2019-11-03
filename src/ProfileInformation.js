@@ -12,7 +12,6 @@ import campRank from "./assets/camprank_site.png";
 import blogApp from "./assets/blogapp-site.png";
 import taskyv from "./assets/taskyv_site.png";
 import bookThinks from "./assets/bookThinks.png";
-import puppy from "./assets/puppy.png";
 
 import resume from "./assets/Resume.pdf";
 
