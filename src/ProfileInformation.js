@@ -82,7 +82,7 @@ let portfolioItems = [
     imageUrl: recrootBox,
     title: "Recroot Box",
     description: "Easy to user porfolio-site template",
-    link: "https://trevorhere.github.io/recrootBox/"
+    link: "https://github.com/trevorhere/recrootBox/"
   },
   {
     imageUrl: campRank,
