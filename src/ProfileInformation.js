@@ -12,7 +12,6 @@ import campRank from "./assets/camprank_site.png";
 import blogApp from "./assets/blogapp-site.png";
 import taskyv from "./assets/taskyv_site.png";
 import bookThinks from "./assets/bookThinks.png";
-import puppy from "./assets/puppy.png";
 
 import resume from "./assets/Resume.pdf";
 
@@ -83,7 +82,7 @@ let portfolioItems = [
     imageUrl: recrootBox,
     title: "Recroot Box",
     description: "Easy to user porfolio-site template",
-    link: "https://trevorhere.github.io/recrootBox/"
+    link: "https://github.com/trevorhere/recrootBox/"
   },
   {
     imageUrl: campRank,
