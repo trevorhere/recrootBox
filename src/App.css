@@ -6,20 +6,19 @@
 }
 
 .Blog {
-  
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 }
 
-
-
-.Divider{
-  border-color: #BBBCBE;
-  display: block; height: 1px;
-  border: 0; border-top: 1px solid #ccc;
-  margin: 1em 0; padding: 0;
+.Divider {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #003344;
+  margin: 1em 0;
+  padding: 0;
 }
 
 .HeaderSection {
@@ -32,7 +31,6 @@
   top: 0;
   z-index: -99;
 }
-
 
 .HeaderSection .Switch {
   text-emphasis: center;
@@ -92,7 +90,7 @@
 .link-icon {
   height: 1.3em;
   width: 1.3em;
-  margin:0 .4em;
+  margin: 0 0.4em;
 }
 
 .HS-Links a {
@@ -102,8 +100,8 @@
   padding: 5px;
 }
 
-.HS-Links a:hover  {
-  cursor:'pointer';
+.HS-Links a:hover {
+  cursor: "pointer";
   color: #222;
   align-self: center;
   text-decoration: none;
@@ -139,7 +137,6 @@
   flex-basis: 20%;
   padding: 0 50px;
 }
-
 
 .PortfolioSectionItem button {
   font-family: "Roboto", sans-serif;
@@ -190,9 +187,7 @@
     min-height: 100%;
     position: relative;
     z-index: 0;
-
   }
-
 
   .PortfolioSection {
     display: flex;
@@ -206,7 +201,6 @@
     margin-top: 0;
     position: relative;
     z-index: 0;
-
   }
 
   .HS-Title {
@@ -224,7 +218,7 @@
 
   .HS-Selfie-and-Name {
     flex-direction: column;
-    margin-top: 10%
+    margin-top: 10%;
   }
 
   .HS-Selfie {
@@ -249,4 +243,16 @@
     padding: 20px;
     display: flex;
   }
+
+
+}
+
+.keepReadingLink  a  {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    font-style: italic !important;
+}
+
+.keepReadingLink  a:hover  {
+text-decoration: line-through;
 }

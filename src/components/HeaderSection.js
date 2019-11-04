@@ -13,6 +13,8 @@ import {
   links,
   userIcons,
   darkModeSwitch,
+  accent,
+  blogName
 } from "../ProfileInformation";
 import "../App.css";
 
@@ -26,13 +28,15 @@ let darkStyle = {
 
 class HeaderSection extends Component {
 
-  headerLink ={
-    backgroundColor: "#fff",
+  headerLink = {
+    color: accent,
+    fontFamily: "Roboto Mono",
     textEmphasis: "center",
     position: "absolute",
-    top: "30px",
-    right: "30px"
-  }
+    right: "30px",
+    top: "20px"
+
+  };
 
 
   render() {
@@ -42,7 +46,7 @@ class HeaderSection extends Component {
 
     return (
       <div className="HeaderSection" style={darkModeStyle}>
-        <Link style={this.headerLink} to='/posts'>POSTS</Link>
+        <Link style={this.headerLink} to='/posts'>{blogName}</Link>
         {darkModeSwitch ? (
           <div className="Switch">
             <Switch onChange={this.props.onSwitch} offLabel='' onLabel='' />

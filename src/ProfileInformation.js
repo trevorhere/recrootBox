@@ -17,6 +17,8 @@ import resume from "./assets/Resume.pdf";
 
 let darkModeSwitch = true;
 let darkMode = false;
+let accent = "#003344"
+
 
 // Edit person info here
 // -- Bio is best kept to around 5 lines
@@ -104,6 +106,8 @@ let portfolioItems = [
 // If you do not want the footer to be displayed (it just has a link to the github repo
 // -- for this template ) then you can set showFooter to false and it will go away.
 let showFooter = true;
+let blogName = "./log";
+let gistUrl = `https://api.github.com/gists/68cc754fb298f3121b5b2b4cfaa754d4`
 
 export {
   firstName,
@@ -118,5 +122,8 @@ export {
   links,
   userIcons,
   darkModeSwitch,
-  darkMode
+  darkMode,
+  accent,
+  blogName,
+  gistUrl
 };
