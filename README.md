@@ -28,7 +28,7 @@ You can use [github Pages](https://pages.github.com/) as a free hosting platform
 
 e.g.: 
 
-![deploy_settings](https://imgur.com/a/tJvvXB1)
+![deploy_settings](https://i.imgur.com/in3hNWR.png)
 
 ### Github Pages
 
