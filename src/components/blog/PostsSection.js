@@ -1,6 +1,6 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../App.css";
-import { Preloader, Row } from "react-materialize";
+import { Row } from "react-materialize";
 import LinkView from "./LinkView";
 import BlogView from "./BlogView";
 import PostHeader from "./PostHeader";

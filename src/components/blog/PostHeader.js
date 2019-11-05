@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Preloader, Row, Col, Navbar, NavItem } from "react-materialize"
+import React from 'react';
+import { Row } from "react-materialize"
 import { accent, blogName } from "../../ProfileInformation"
 import { Link } from "react-router-dom"
 import { FaTh, FaList } from "react-icons/fa";

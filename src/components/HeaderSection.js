@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { FaBolt, FaLightbulb, FaRegLightbulb } from "react-icons/fa";
+import { FaBolt } from "react-icons/fa";
 import { Link } from "react-router-dom"
 
-import { Switch, Button } from "react-materialize";
+import { Switch } from "react-materialize";
 
 import {
   firstName,
