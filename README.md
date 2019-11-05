@@ -1,7 +1,7 @@
 # recrootBox
 
 Portfolio site template for those new to web development.
-Step by step instructions can be found [here](https://www.youtube.com/watch?v=tz04HiWaPfc)
+Step by step video instructions can be found here: [📺](https://www.youtube.com/watch?v=tz04HiWaPfc)
 
 ## Installation
 
@@ -13,12 +13,6 @@ Step by step instructions can be found [here](https://www.youtube.com/watch?v=tz
 
 #### Previously, I recommended using github pages to host the project. Recently, I've found [netlify](https://www.netlify.com/) to be easier to use. 
 
-##### Alternatively
-
-You can use [github Pages](https://pages.github.com/) as a free hosting platform. You can find Instructions [here.](https://medium.com/@_mariacheline/deploy-create-react-app-project-to-github-pages-2eb6deda5b89)
-
-
-
 ### Netlify
 
 1. Create a new site in netlify. 
@@ -26,7 +20,6 @@ You can use [github Pages](https://pages.github.com/) as a free hosting platform
 3. In netlify deploy settings, specify `/build` as the content directory
 4. In netlify deploy settings, specify `npm i && npm run build` as the deploy command
 
-e.g.: 
 
 ![deploy_settings](https://i.imgur.com/in3hNWR.png)
 
