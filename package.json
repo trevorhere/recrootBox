@@ -7,6 +7,7 @@
     "react": "^16.4.1",
     "react-bar-chart": "^0.1.2",
     "react-dom": "^16.4.1",
+    "react-emoji-render": "^1.0.0",
     "react-icons": "^3.7.0",
     "react-materialize": "^3.3.1",
     "react-scripts": "1.1.4",
@@ -23,5 +24,17 @@
   },
   "devDependencies": {
     "gh-pages": "^2.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
