@@ -25,11 +25,10 @@ let accent = "#003344"
 let firstName = "Trevor";
 let lastName = "Lane";
 let title = "Student / Software Developer";
-let bio = `Hey there, I'm currently studying computer science
-   at Brigham Young University and working as a Software
-   Engineering Intern at SimpleNexus.
-   Feel free to reach out, take a look at some things i've built
-   here, or checkout my code on github.`;
+let bio = `Currently studying Computer Science at Brigham Young University 
+and working as a software engineering intern at a company called SimpleNexus 
+where I work with Vue.js & Rails. 
+Feel free to check out some of my past projects below, browse some code on my github profile, or just reach out to say hi!`;
 
 //Edit links to external accounts or items here (e.g. github, linkedIn, leetcode, resume, etc.)
 // -- For display purposes, it's best to use between 3 and 5 links, but if you add more or less,
