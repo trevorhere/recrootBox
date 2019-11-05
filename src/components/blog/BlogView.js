@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import "../App.css";
+import "../../App.css";
+
 import { Preloader, Row, Col } from "react-materialize";
+import { accent } from "../../ProfileInformation";
 import ReactMarkdown from "react-markdown";
-import { accent } from "../ProfileInformation";
+
 
 class BlogView extends Component {
   constructor(props) {
@@ -31,7 +33,9 @@ class BlogView extends Component {
   };
 
   keepReadingLink = {
-    color: accent,
+    backgroundColor: accent,
+    padding: "5px 9px ",
+    color: "#fff",
 
   }
 

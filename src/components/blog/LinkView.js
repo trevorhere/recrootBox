@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "../App.css";
+import "../../App.css";
+
 import { Preloader, Row, Col } from "react-materialize";
-import ReactMarkdown from "react-markdown";
-import { accent } from "../ProfileInformation";
+import { accent } from "../../ProfileInformation";
 
 
 class LinkView extends Component {

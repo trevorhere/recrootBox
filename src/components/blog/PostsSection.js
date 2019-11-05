@@ -1,12 +1,12 @@
 import React, { Component, useEffect, useState } from "react";
-import "../App.css";
+import "../../App.css";
 import { Preloader, Row } from "react-materialize";
 import LinkView from "./LinkView";
 import BlogView from "./BlogView";
 import PostHeader from "./PostHeader";
-import PreLoader from "./PreLoader";
+import PreLoader from "../PreLoader";
 
-import { gistUrl } from "../ProfileInformation";
+import { gistUrl } from "../../ProfileInformation";
 
 const blog = {
   display: "flex",
@@ -68,7 +68,7 @@ const useFetch = (url) => {
   return { files, response, error, isLoading };
 };
 
-const PostList = (props) => {
+const PostsSection = (props) => {
   const data = useFetch(gistUrl);
   const [listView, setListView] = useState(true);
   const listToggler = () => {
@@ -117,4 +117,4 @@ const PostList = (props) => {
     );
   }
 }
-export default PostList;
+export default PostsSection;

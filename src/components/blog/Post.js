@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "../App.css";
-import ReactMarkdown from "react-markdown";
+import "../../App.css";
 import { Row, Col } from "react-materialize";
 import { Link } from "react-router-dom";
-import { gistUrl, blogName, accent } from '../ProfileInformation'
-import PreLoader from "./PreLoader"
+import { gistUrl, blogName, accent } from '../../ProfileInformation'
+import PreLoader from "../PreLoader"
+import ReactMarkdown from "react-markdown";
 
 const blog = {
   display: "flex",

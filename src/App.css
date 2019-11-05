@@ -255,4 +255,5 @@
 
 .keepReadingLink  a:hover  {
 text-decoration: line-through;
+color: #003344;
 }
