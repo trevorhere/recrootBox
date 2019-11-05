@@ -17,14 +17,17 @@ import resume from "./assets/Resume.pdf";
 
 let darkModeSwitch = true;
 let darkMode = false;
+let accent = "#003344"
+
 
 // Edit person info here
 // -- Bio is best kept to around 5 lines
 let firstName = "Trevor";
 let lastName = "Lane";
-let title = "Student / Software Engineer";
-let bio = `Currently studying Computer Science at Brigham Young Universirty and working as a software engineering intern at a company called SimpleNexus where I work with Vue.js & Rails. 
-
+let title = "Student / Software Developer";
+let bio = `Currently studying Computer Science at Brigham Young University 
+and working as a software engineering intern at a company called SimpleNexus 
+where I work with Vue.js & Rails. 
 Feel free to check out some of my past projects below, browse some code on my github profile, or just reach out to say hi!`;
 
 //Edit links to external accounts or items here (e.g. github, linkedIn, leetcode, resume, etc.)
@@ -101,7 +104,9 @@ let portfolioItems = [
 
 // If you do not want the footer to be displayed (it just has a link to the github repo
 // -- for this template ) then you can set showFooter to false and it will go away.
-let showFooter = false;
+let showFooter = true;
+let blogName = "./log";
+let gistUrl = "https://api.github.com/gists/68cc754fb298f3121b5b2b4cfaa754d4"
 
 export {
   firstName,
@@ -116,5 +121,8 @@ export {
   links,
   userIcons,
   darkModeSwitch,
-  darkMode
+  darkMode,
+  accent,
+  blogName,
+  gistUrl
 };
