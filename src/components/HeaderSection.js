@@ -45,7 +45,6 @@ class HeaderSection extends Component {
         </div>
         <p className="HS-Bio" > {bio} </p>
         <div className="HS-Links">
-
           {links.map(function (item, index) {
             return (
               <a key={index} href={item.link}>
