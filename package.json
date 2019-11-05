@@ -4,19 +4,25 @@
   "private": true,
   "homepage": "http://trevorlane.xyz/",
   "dependencies": {
-    "react": "^16.4.1",
+    "@octokit/rest": "^16.28.7",
+    "install": "^0.13.0",
+    "json-loader": "^0.5.7",
+    "npm": "^6.11.2",
+    "react": "^16.11.0",
     "react-bar-chart": "^0.1.2",
     "react-dom": "^16.4.1",
     "react-icons": "^3.7.0",
+    "react-markdown": "^4.1.0",
     "react-materialize": "^3.3.1",
-    "react-scripts": "1.1.4",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.2.0",
     "react-scrollable-list": "^1.2.0",
     "recharts": "^1.0.0-beta.10"
   },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
+    "start": "PORT=35729 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

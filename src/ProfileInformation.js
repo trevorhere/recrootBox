@@ -106,7 +106,7 @@ let portfolioItems = [
 // -- for this template ) then you can set showFooter to false and it will go away.
 let showFooter = true;
 let blogName = "./log";
-let gistUrl = "https://api.github.com/gists/68cc754fb298f3121b5b2b4cfaa754d4"
+let gistUrl = `https://api.github.com/gists/68cc754fb298f3121b5b2b4cfaa754d4`
 
 export {
   firstName,
