@@ -10,7 +10,7 @@
     "npm": "^6.11.2",
     "react": "^16.11.0",
     "react-bar-chart": "^0.1.2",
-    "react-dom": "^16.4.1",
+    "react-dom": "^16.4.2",
     "react-icons": "^3.7.0",
     "react-markdown": "^4.1.0",
     "react-materialize": "^3.3.1",
