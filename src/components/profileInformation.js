@@ -19,6 +19,7 @@ let darkMode = false;
 let accent = "#003344"
 
 
+
 // Edit person info here
 // -- Bio is best kept to around 5 lines
 let firstName = "Trevor";
