@@ -1,6 +1,5 @@
 import React from "react";
 import { portfolioTitle, portfolioItems, portfolioSectionBackgroundColor } from "./ProfileInformation";
-import { Card, CardTitle, Button, Col, Row } from "react-materialize";
 import styled from 'styled-components';
 
 
@@ -18,9 +17,10 @@ const PortfolioSection = (props) => {
       <h1 className="PS-Title">{portfolioTitle}</h1>
       <div style={PSListStyles} className="PS-List">
         <PortfolioRow children={2}>
-          {portfolioItems.map((item, index) => {
+          {portfolioItems.map((item, i) => {
             return (
                 <PortfolioCard
+                  key={i}
                   className={darkModeStyle}
                 >
                   <img src={item.imageUrl}/>
