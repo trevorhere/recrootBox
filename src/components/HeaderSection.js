@@ -1,7 +1,7 @@
 import React from "react";
 import "./app.css";
 import { FaBolt } from "react-icons/fa";
-// import { Link } from "react-router-dom"
+import { Link } from "gatsby"
 import { Switch } from "react-materialize";
 
 import {
@@ -40,12 +40,12 @@ const HeaderSection = (props) => {
 
   return (
     <div className="HeaderSection" style={darkModeStyle}>
-      {/* {renderBlog ? <Link style={headerLink} to='/posts'>{blogName}</Link> : null}
+      {renderBlog ? <Link style={headerLink} to='/posts'>{blogName}</Link> : null}
       {darkModeSwitch ? (
         <div className="Switch">
           <Switch onChange={props.onSwitch} offLabel='' onLabel='' />
         </div>
-      ) : <div></div>} */}
+      ) : <div></div>}
       <div className="HS-Selfie-and-Name">
         {props.test}
         <img src={selfie} className="HS-Selfie" alt="selfie" />
