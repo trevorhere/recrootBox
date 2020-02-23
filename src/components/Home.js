@@ -5,7 +5,7 @@ import FooterSection from "./FooterSection";
 import { darkMode } from "./ProfileInformation";
 import { Row } from "react-materialize";
 
-import './App.css';
+import './app.css';
 
 const Home = () => {
   const [darkModeProp, setDarkModeProp] = useState(darkMode)

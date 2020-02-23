@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./app.css";
 import { FaBolt } from "react-icons/fa";
 // import { Link } from "react-router-dom"
 import { Switch } from "react-materialize";
