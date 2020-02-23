@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import HeaderSection from "./HeaderSection";
 import PortfolioSection from "./PortfolioSection";
 import FooterSection from "./FooterSection";
-import { darkMode } from "../ProfileInformation";
+import { darkMode } from "./ProfileInformation";
 import { Row } from "react-materialize";
 
 import './App.css';

@@ -16,7 +16,7 @@ import {
   accent,
   blogName,
   renderBlog
-} from "../ProfileInformation";
+} from "./ProfileInformation";
 
 const darkStyle = {
   color: 'white',

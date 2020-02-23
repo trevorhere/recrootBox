@@ -1,5 +1,5 @@
 import React from "react";
-import { portfolioTitle, portfolioItems, portfolioSectionBackgroundColor } from "../ProfileInformation";
+import { portfolioTitle, portfolioItems, portfolioSectionBackgroundColor } from "./ProfileInformation";
 import { Card, CardTitle, Button, Col, Row } from "react-materialize";
 import styled from 'styled-components';
 
