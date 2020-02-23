@@ -21,7 +21,7 @@ const Home = () => {
       />
       <Row style={{ margin: "0" }}>
         <PortfolioSection darkMode={darkModeProp} />
-      </Row>
+      </Row>d
       <FooterSection />
     </div>
   );
