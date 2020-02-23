@@ -5,7 +5,8 @@ module.exports = {
     author: `@hiTrevorHere`,
   },
   plugins: [
-    'gatsby-plugin-netlify-cache',
+    `gatsby-plugin-netlify-cache`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
