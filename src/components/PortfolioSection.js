@@ -1,6 +1,11 @@
 import React from "react";
-import { portfolioTitle, portfolioItems, portfolioSectionBackgroundColor } from "./ProfileInformation";
+import { 
+  portfolioTitle, 
+  portfolioItems, 
+  portfolioSectionBackgroundColor 
+} from "./ProfileInformation";
 import styled from 'styled-components';
+import './app.css'
 
 
 const PSListStyles = {
@@ -16,7 +21,7 @@ const PortfolioSection = (props) => {
     <div className="PortfolioSection" style={PSListStyles} >
       <h1 className="PS-Title">{portfolioTitle}</h1>
       <div style={PSListStyles} className="PS-List">
-        <PortfolioRow children={2}>
+        <PortfolioRow >
           {portfolioItems.map((item, i) => {
             return (
                 <PortfolioCard
@@ -30,7 +35,7 @@ const PortfolioSection = (props) => {
                   <br />
                   <br />
                   <a style={{ color: "white" }} href={item.link}>
-                    <PortfolioButton  waves="light">
+                    <PortfolioButton >
                       View
                       </PortfolioButton>
                   </a>
