@@ -35,8 +35,6 @@ const handleFetchResponse = (data, targetFile) => {
 
 const useFetch = (url, targetFile) => {
 
- 
-
   const [response, setResponse] = useState(null);
   const [post, setPost] = useState({});
   const [error, setError] = useState(null);
@@ -145,8 +143,6 @@ const HomeLink =  styled(Link)`
 
 
 const HeaderLink =  styled(Link)`
-
-
   background-color: rgb(0, 51, 68); 
   color: rgb(255, 255, 255); 
   padding: 20px; 

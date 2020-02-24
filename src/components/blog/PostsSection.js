@@ -57,7 +57,7 @@ const useFetch = (url) => {
             date: fileInfo.date
           });
         }
-        setFiles(files)
+        setFiles([...files.reverse()])
         setIsLoading(false)
       } catch (error) {
         setError(error);
