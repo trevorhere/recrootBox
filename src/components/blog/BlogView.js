@@ -2,22 +2,12 @@ import React from "react";
 import "../app.css";
 import { Link } from 'gatsby';
 
-import { Row, Col } from "react-materialize";
+import { Row } from "react-materialize";
 import { accent } from "../ProfileInformation";
 import ReactMarkdown from "react-markdown";
 
-const contentStyle = {
-  fontSize: "1.5em",
-  lineHeight: "1.6",
-  letterSpacing: "-0.02em",
-  fontFamily: 'Tinos'
-};
+import styled from 'styled-components'
 
-const keepReadingLink = {
-  backgroundColor: accent,
-  padding: "5px 9px ",
-  color: "#fff",
-}
 
 const abbrContent = (content) => {
   if (content.split(" ").length < 150) {
@@ -33,28 +23,46 @@ const BlogView = (props) => {
   const altered_filename = filename.substr(0, filename.length - 3)
 
   return (
-    <article>
-      <Col s={0} l={3}></Col>
-      <Col s={12} l={6}>
+    <BlogStub>
         <Row>
-          <span>{date}</span>
-        </Row>
-        <Row style={contentStyle}>
-          <ReactMarkdown source={abbrContent(content)} />
+          <MarkDown source={abbrContent(content)} />
         </Row>
         {content.length > 500 ? (
-          <div className="keepReadingLink">
-            <Link style={keepReadingLink} to={`/posts/${altered_filename}/68cc754fb298f3121b5b2b4cfaa754d4`} >
+            <KeepReading to={`/posts/${altered_filename}/68cc754fb298f3121b5b2b4cfaa754d4`} >
               Keep Reading
-                </Link>
-          </div>
+            </KeepReading>
         ) : null}
         <hr className="Divider Blue" />
-
-      </Col>
-      <Col s={0} l={3}></Col>
-    </article>
+    </BlogStub>
   );
 }
 
 export default BlogView;
+
+const MarkDown = styled(ReactMarkdown)`
+font-size: 1.5em;
+line-height: 1.6;
+letter-spacing: -0.02em;
+font-family: 'Tinos';
+`
+
+const KeepReading = styled(Link)`
+  background-color: ${accent};
+  padding: 5px 9px;
+  color: #fff;
+
+  &:hover {
+    background-color:white;
+    color: ${accent};
+    border: 2px solid ${accent};
+  }
+`
+const BlogStub = styled.article`
+  margin-bottom: 5rem;
+  width: 50%; 
+  margin:0 auto!important;  
+
+  @media (max-width: 768px) {
+    width: 90%; 
+  }
+`

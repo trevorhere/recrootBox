@@ -57,8 +57,8 @@ const useFetch = (url) => {
             date: fileInfo.date
           });
         }
-        setIsLoading(false)
         setFiles(files)
+        setIsLoading(false)
       } catch (error) {
         setError(error);
       }
@@ -88,7 +88,7 @@ const PostsSection = () => {
       <div>
         <PostHeader viewToggleSwitch={listToggler} listView={listView} />
         <div style={blog}>
-          <div style={{ width: "100%" }}>
+          <div style={{ width: "100%", margin: "0 2rem" }}>
             {files.map((item, index) => {
               return (
                 <div key={index}>

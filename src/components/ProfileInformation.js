@@ -104,7 +104,7 @@ let portfolioItems = [
 // If you do not want the footer to be displayed (it just has a link to the github repo
 // -- for this template ) then you can set showFooter to false and it will go away.
 let showFooter = true;
-let blogName = "./log";
+let blogName = "The Intern MR";
 let renderBlog = true;
 let gistUrl = `https://api.github.com/gists/68cc754fb298f3121b5b2b4cfaa754d4`
 

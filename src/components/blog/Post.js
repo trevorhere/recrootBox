@@ -70,18 +70,9 @@ const Post = props => {
 
   const targetFile =  props.file_name;
 
-  // console.log('props: ', targetFile);
-  
   const data =  useFetch(gistUrl, targetFile);
   console.log('data: ', data);
   console.log('title: ', data.post.title); 
-// return (
-
-  // <div>
-  //   {data.post.title}
-  //     <ReactMarkdown className="markdown" source={data.post.content} /> 
-  //   </div>);
-
 
   if (data.error) {
     return <div>Error: {data.error}</div>;
@@ -91,25 +82,21 @@ const Post = props => {
     console.log('data: ', data);
     const { post } = data;
     return (
-      <Row>
-        <Col s={1} l={4}></Col>
-        <Col s={8} l={4}>
-          <Blog >
-            <Link  to="/">
-              home
-              </Link>
-            <Link to="/posts">
-              {blogName}
-            </Link>
-            <div>
-              <Content>
-                <ReactMarkdown className="markdown" source={post?.content} />
-              </Content>
-            </div>
-          </Blog>
-        </Col>
-        <Col s={1} l={4}></Col>
-      </Row>
+      <div>
+        <HeaderRow>
+          <HeaderLink to="/posts">
+            {blogName}
+          </HeaderLink>
+          <HomeLink  to="/">
+            home
+          </HomeLink>
+        </HeaderRow>
+        <Blog >
+          <Content>
+            <ReactMarkdown className="markdown" source={post?.content} />
+          </Content>
+        </Blog>
+      </div>
     );
   }
 }
@@ -130,11 +117,25 @@ const Content  =  styled.div`
   line-height: 1.6;
   letter-spacing: -0.02em;
   font-family: Tinos;
-  width: 100%;
+  width: 50%; 
+  margin:0 auto!important;  
+
+  @media (max-width: 768px) {
+    width: 90%; 
+  }
+`
+const HeaderRow = styled.div`
+  top: 0;
+  min-height: 100px;
+  background-color: ${accent};
+  display: flex;
+  justify-content: center;
+;
 `
 
-const homeLink =  styled.div`
-  color: accent;
+
+const HomeLink =  styled(Link)`
+  color: white;
   font-family: Roboto Mono;
   text-emphasis: center;
   position: absolute;
@@ -142,11 +143,15 @@ const homeLink =  styled.div`
   top: 20px;
 `
 
-const headerLink =  styled.div`{
-  color: accent;
-  fontFamily: Roboto Mono;
-  textEmphasis: center;
-  position: absolute;
-  right: 30px;
-  top: 20px;
+
+const HeaderLink =  styled(Link)`
+
+
+  background-color: rgb(0, 51, 68); 
+  color: rgb(255, 255, 255); 
+  padding: 20px; 
+  font-family: "Roboto Mono";
+  text-align: center; 
+  margin: 0px auto;
 `
+
