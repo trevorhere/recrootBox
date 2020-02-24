@@ -40,7 +40,6 @@ const useFetch = (url, targetFile) => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
@@ -111,7 +110,7 @@ const Blog =  styled.div`
 `
 
 const Content  =  styled.div`
-  font-size:1.5em;
+  font-size:1.25rem;
   line-height: 1.6;
   letter-spacing: -0.02em;
   font-family: Tinos;
