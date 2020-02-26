@@ -49,9 +49,14 @@
   
   .HS-Title {
     color: #878787;
-    font-size: 2.22rem;
+    font-size: 1.5rem;
     letter-spacing: 0.08rem;
     font-weight: 300;
+    margin: .25rem 0;
+  }
+
+  .HS-Name {
+    margin-bottom: 0;
   }
   
   .HS-Bio {
@@ -70,6 +75,11 @@
     font-size: 2rem;
     letter-spacing: 0.08rem;
     font-weight: 500;
+    justify-content: space-evenly; 
+  }
+
+  .HS-Selfie-and-Name img {
+    border-radius: 50%;
   }
   
   .HS-Selfie {
@@ -228,10 +238,7 @@
       padding: 0;
     }
   
-    .HS-Name-Title-Block {
-      text-align: center;
-      font-size: 0.75em;
-    }
+
   
     .HS-Links {
       padding: 20px;

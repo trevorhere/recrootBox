@@ -1,22 +1,30 @@
 import { FaGithub, FaLinkedin, FaEnvelope, FaFileAlt } from "react-icons/fa";
-// Import image of your self here:
-//-- For best display purposes, your image should be sqaure (e.g. 300 X 300 px)
-import selfie from "../images/trevor.png";
+
 
 //Import images for your portfolio here:
 //-- For best display purposes, each of these images should have similar porportions
 
-import recrootBox from "../images/recrootBox_site.png";
-import campRank from "../images/camprank_site.png";
-import blogApp from "../images/blogapp-site.png";
-import taskyv from "../images/taskyv_site.png";
-import bookThinks from "../images/bookThinks.png";
+// import recrootBox from "../images/recrootBox_site.png";
+// import campRank from "../images/camprank_site.png";
+// import blogApp from "../images/blogapp-site.png";
+// import taskyv from "../images/taskyv_site.png";
+// import bookThinks from "../images/bookThinks.png";
 
 import resume from "../assets/Resume.pdf";
 
 let darkModeSwitch = true;
 let darkMode = false;
 let accent = "#003344"
+
+// Import image of your self here:
+//-- For best display purposes, your image should be sqaure (e.g. 300 X 300 px)
+const selfie = "trevor.png";
+const recrootBox = "recrootBox_site.png";
+const campRank =  "camprank_site.png";
+const blogApp = "blogapp-site.png";
+const taskyv = "taskyv_site.png";
+const bookThinks = "bookThinks.png";
+
 
 
 // Edit person info here
@@ -125,5 +133,6 @@ export {
   accent,
   blogName,
   renderBlog,
-  gistUrl
+  gistUrl,
+  campRank
 };

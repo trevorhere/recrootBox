@@ -5,6 +5,7 @@ import {
   portfolioSectionBackgroundColor 
 } from "./ProfileInformation";
 import styled from 'styled-components';
+import MyImg from './image'
 import './app.css'
 
 
@@ -23,12 +24,13 @@ const PortfolioSection = (props) => {
       <div style={PSListStyles} className="PS-List">
         <PortfolioRow >
           {portfolioItems.map((item, i) => {
+            console.log('image:', item.imageUrl)
             return (
                 <PortfolioCard
                   key={i}
                   className={darkModeStyle}
                 >
-                  <img src={item.imageUrl}/>
+                  <MyImg src={item.imageUrl} />
                   <hr />
                 <h2>{item.title}</h2>
                   {item.description}

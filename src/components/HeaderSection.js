@@ -3,6 +3,7 @@ import "./app.css";
 import { FaBolt } from "react-icons/fa";
 import { Link } from "gatsby"
 import { Switch } from "react-materialize";
+import styled from "styled-components";
 
 import {
   firstName,
@@ -15,8 +16,12 @@ import {
   darkModeSwitch,
   accent,
   blogName,
-  renderBlog
+  renderBlog,
+  campRank,
+  portfolioItems
 } from "./ProfileInformation";
+import MyImg from './image'
+
 
 const darkStyle = {
   color: 'white',
@@ -46,19 +51,19 @@ const HeaderSection = (props) => {
           <Switch onChange={props.onSwitch} offLabel='' onLabel='' />
         </div>
       ) : <div></div>}
-      <div className="HS-Selfie-and-Name">
-        {props.test}
-        <img src={selfie} className="HS-Selfie" alt="selfie" />
-        <div className="HS-Name-Title-Block">
-          <h1 className="HS-Name"  >
-            {firstName} {lastName}
+      <TitleBlock className="HS-Selfie-and-Name">
+        <SelfieDiv>
+          <MyImg src={selfie} />
+        </SelfieDiv>
+
+        <NameTitleBlock >
+          <h1 className="HS-Name"> {firstName} {lastName}
           </h1>
           <h2 className="HS-Title"> {title} </h2>
-        </div>
-      </div>
+        </NameTitleBlock>
+      </TitleBlock>
       <p className="HS-Bio" > {bio} </p>
       <div className="HS-Links">
-
         {links.map(function (item, index) {
           return (
             <a key={index} href={item.link}>
@@ -78,3 +83,24 @@ const HeaderSection = (props) => {
 }
 
 export default HeaderSection;
+
+
+
+
+const SelfieDiv = styled.div`
+  width: 150px;
+`
+
+const TitleBlock = styled.div`
+margin-bottom: 1rem;
+  
+`
+
+const NameTitleBlock = styled.div`
+  text-align: left;
+  margin: 0 .25rem;
+  font-size: 0.75em;
+  @media (max-width: 1000px) {
+    text-align:center;
+  }
+`
