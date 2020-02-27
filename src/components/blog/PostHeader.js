@@ -3,6 +3,7 @@ import { Row } from "react-materialize"
 import { accent, blogName } from "../ProfileInformation"
 import { Link } from "gatsby"
 import { FaTh, FaList } from "react-icons/fa";
+import styled from 'styled-components'
 
 
 
@@ -30,7 +31,7 @@ const headerLink = {
   textEmphasis: "center",
   position: "absolute",
   right: "30px",
-  top: "20px"
+  top: "10px"
 
 };
 
@@ -40,7 +41,7 @@ const viewSwitcher = {
   textEmphasis: "center",
   position: "absolute",
   left: "30px",
-  top: "24px"
+  top: "14px"
 }
 
 const PostHeader = props => {
@@ -61,3 +62,12 @@ const PostHeader = props => {
 }
 
 export default PostHeader;
+
+const HeaderLink = styled(Link)`
+  color: ${accent};
+  font-family:  Roboto Mono;
+  text-emphasis: center;
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  `

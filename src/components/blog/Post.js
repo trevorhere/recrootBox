@@ -88,7 +88,7 @@ const Post = props => {
             home
           </HomeLink>
         </HeaderRow>
-        <Blog >
+        <Blog  className="Blog">
           <Content>
             <ReactMarkdown className="markdown" source={post?.content} />
           </Content>

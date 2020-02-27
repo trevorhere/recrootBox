@@ -5,13 +5,16 @@
     width: 100%;
   }
   
-  .Blog {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+
+  .Blog p {
+    font-family: Roboto;
+  } 
+
+  .Blog img {
+    width: 100%;
   }
-  
+
+
   .Divider {
     display: block;
     height: 1px;
@@ -119,6 +122,7 @@
   .PortfolioSection {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     min-height: 100vh;
     align-items: center;
     margin: 0 auto;

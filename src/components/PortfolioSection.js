@@ -21,7 +21,6 @@ const PortfolioSection = (props) => {
   return (
     <div className="PortfolioSection" style={PSListStyles} >
       <h1 className="PS-Title">{portfolioTitle}</h1>
-      <div style={PSListStyles} className="PS-List">
         <PortfolioRow >
           {portfolioItems.map((item, i) => {
             console.log('image:', item.imageUrl)
@@ -45,7 +44,6 @@ const PortfolioSection = (props) => {
             );
           })}
         </PortfolioRow>
-      </div>
     </div>
   );
 }
@@ -59,6 +57,7 @@ const PortfolioRow =  styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   padding-bottom: 3rem;
+  justify-content: center;
 `
 
 const PortfolioButton = styled.button `
@@ -74,7 +73,7 @@ const PortfolioButton = styled.button `
 `
 
 const PortfolioCard =  styled.div`
-  display: inline-block;
+
   margin: 0 1em;
   width: calc(33% - 2em);
   background: white;
@@ -82,4 +81,8 @@ const PortfolioCard =  styled.div`
   margin: 1rem;
   border-radius: 4px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  @media (max-width: 768px) {
+    width: 90%; 
+    margin: 1rem 0;
+  }
 `

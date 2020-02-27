@@ -28,15 +28,7 @@ const darkStyle = {
   backgroundColor: 'black',
 };
 
-const headerLink = {
-  color: accent,
-  fontFamily: "Roboto Mono",
-  textEmphasis: "center",
-  position: "absolute",
-  right: "30px",
-  top: "20px"
 
-};
 
 const HeaderSection = (props) => {
 
@@ -45,7 +37,7 @@ const HeaderSection = (props) => {
 
   return (
     <div className="HeaderSection" style={darkModeStyle}>
-      {renderBlog ? <Link style={headerLink} to='/posts'>{blogName}</Link> : null}
+      {renderBlog ? <HeaderLink to='/posts'>{blogName}</HeaderLink> : null}
       {darkModeSwitch ? (
         <div className="Switch">
           <Switch onChange={props.onSwitch} offLabel='' onLabel='' />
@@ -89,6 +81,7 @@ export default HeaderSection;
 
 const SelfieDiv = styled.div`
   width: 150px;
+  margin: 1rem;
 `
 
 const TitleBlock = styled.div`
@@ -104,3 +97,12 @@ const NameTitleBlock = styled.div`
     text-align:center;
   }
 `
+
+const HeaderLink = styled(Link)`
+  color: ${accent};
+  font-family:  Roboto Mono;
+  text-emphasis: center;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  `
