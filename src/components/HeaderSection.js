@@ -37,7 +37,7 @@ const HeaderSection = (props) => {
 
   return (
     <div className="HeaderSection" style={darkModeStyle}>
-      {renderBlog ? <HeaderLink to='/posts'>{blogName}</HeaderLink> : null}
+      {renderBlog ? props.darkMode ? < HeaderLink  style={{color: `white`}} to="/posts" >{blogName}</HeaderLink> : <HeaderLink style={{color: `${accent}`}} to="/posts" > {blogName}</HeaderLink>  : null}
       {darkModeSwitch ? (
         <div className="Switch">
           {props.darkMode ? < FaRegSun onClick={props.onSwitch} /> : <FaRegMoon onClick={props.onSwitch} />  }
@@ -99,7 +99,7 @@ const NameTitleBlock = styled.div`
 `
 
 const HeaderLink = styled(Link)`
-  color: ${accent};
+
   font-family:  Roboto Mono;
   text-emphasis: center;
   position: absolute;
