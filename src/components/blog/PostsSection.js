@@ -5,6 +5,7 @@ import LinkView from "./LinkView";
 import BlogView from "./BlogView";
 import PostHeader from "./PostHeader";
 import PreLoader from "../PreLoader";
+import styled, {keyframes} from 'styled-components'
 
 import { gistUrl } from "../ProfileInformation";
 
@@ -14,6 +15,10 @@ const blog = {
   justifyContent: "center",
   paddingTop: "10%"
 };
+
+const renderLoading = () => {
+  return "Loading .."
+}
 
 const translateTitleDate = (fileName) => {
   let arr = fileName.split("__");
@@ -26,15 +31,16 @@ const translateTitleDate = (fileName) => {
   return { title: title, date: date };
 }
 
-const useFetch = (url) => {
+const useFetch = (url, isLoadingCallback) => {
   const [response, setResponse] = useState(null);
   const [files, setFiles] = useState([]);
   const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+
     const fetchData = async () => {
-      setIsLoading(true);
+      isLoadingCallback(true);
+
       try {
         const res = await fetch(url);
         const data = await res.json();
@@ -58,30 +64,41 @@ const useFetch = (url) => {
           });
         }
         setFiles([...files.reverse()])
-        setIsLoading(false)
+        isLoadingCallback(false)
       } catch (error) {
         setError(error);
       }
     };
     fetchData();
   }, []);
-  return { files, response, error, isLoading };
+  return { files, response, error };
 };
 
 const PostsSection = () => {
-  const data = useFetch(gistUrl);
   const [listView, setListView] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const data = useFetch(gistUrl, setIsLoading);
+
+
 
   const listToggler = () => {
     setListView(!listView);
   }
 
+
   const { error, isLoaded, files } = data;
+
+  console.log('isLoading: ', isLoading);
+  console.log('data: ', data);
+
   if (error) {
     return <div>Error: {error.message}</div>;
-  } else if (isLoaded) {
+  } else if (isLoading) {
     return (
-      <PreLoader />
+    <div>
+      <PostHeader viewToggleSwitch={listToggler} listView={listView} />
+      <Loader>Loading<Blink>...</Blink> </Loader>
+    </div>
     )
   } else {
     return (
@@ -119,3 +136,25 @@ const PostsSection = () => {
   }
 }
 export default PostsSection;
+
+const flash = keyframes`
+0%{     color: #000;    }
+49%{    color: #000; }
+60%{    color: transparent; }
+99%{    color:transparent;  }
+100%{   color: #000;    }
+`
+
+const Loader = styled.div`
+font-family:  Roboto Mono;
+text-align: center;
+margin-top: 25%;
+display: flex;
+justify-content: center;
+
+`
+
+const Blink = styled.div`
+font-family: Roboto Mono;
+animation:${flash} 1.2s infinite;
+`
