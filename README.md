@@ -26,7 +26,7 @@ Step by step video instructions can be found here: [📺](https://www.youtube.co
 4. In netlify deploy settings, specify `npm i && npm run build` as the deploy command
 
 
-![deploy_settings](https://i.imgur.com/in3hNWR.png)
+![deploy_settings](https://i.imgur.com/PqUX60y.png)
 
 ### Github Pages
 
