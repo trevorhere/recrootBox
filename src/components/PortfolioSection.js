@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { 
   portfolioTitle, 
   portfolioItems, 
@@ -15,8 +15,18 @@ const PSListStyles = {
 
 const PortfolioSection = (props) => {
 
-  let darkModeStyle = props.darkMode ?
-    "black white-text" : {};
+  const [darkMode, setDarkMode] = useState(null);
+
+  useEffect(() => {
+    setDarkMode(props.darkMode)
+  })
+
+  
+
+  console.log('props: ', darkMode)
+
+  let darkModeStyle = darkMode ?
+    {backgroundColor: `black`, color: `white`} : {};
 
   return (
     <div className="PortfolioSection" style={PSListStyles} >
@@ -27,7 +37,7 @@ const PortfolioSection = (props) => {
             return (
                 <PortfolioCard
                   key={i}
-                  className={darkModeStyle}
+                  style={ darkMode ? {background: `black`, color: `white`} : {}}
                 >
                   <MyImg src={item.imageUrl} />
                   <hr />

@@ -1,6 +1,6 @@
 import React from "react";
 import "./app.css";
-import { FaBolt } from "react-icons/fa";
+import { FaBolt, FaRegMoon, FaRegSun } from "react-icons/fa";
 import { Link } from "gatsby"
 import { Switch } from "react-materialize";
 import styled from "styled-components";
@@ -40,7 +40,7 @@ const HeaderSection = (props) => {
       {renderBlog ? <HeaderLink to='/posts'>{blogName}</HeaderLink> : null}
       {darkModeSwitch ? (
         <div className="Switch">
-          <Switch onChange={props.onSwitch} offLabel='' onLabel='' />
+          {props.darkMode ? < FaRegSun onClick={props.onSwitch} /> : <FaRegMoon onClick={props.onSwitch} />  }
         </div>
       ) : <div></div>}
       <TitleBlock className="HS-Selfie-and-Name">
