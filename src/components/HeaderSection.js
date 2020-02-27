@@ -37,7 +37,7 @@ const HeaderSection = (props) => {
 
   return (
     <div className="HeaderSection" style={darkModeStyle}>
-      {renderBlog ? props.darkMode ? < HeaderLink  style={{color: `white`}} to="/posts" >{blogName}</HeaderLink> : <HeaderLink style={{color: `${accent}`}} to="/posts" > {blogName}</HeaderLink>  : null}
+      {renderBlog ? < HeaderLink  style={ props.darkMode ? {color: `white`} : {color: `${accent}`} } to="/posts" >{blogName}</HeaderLink> : null}
       {darkModeSwitch ? (
         <div className="Switch">
           {props.darkMode ? < FaRegSun onClick={props.onSwitch} /> : <FaRegMoon onClick={props.onSwitch} />  }
