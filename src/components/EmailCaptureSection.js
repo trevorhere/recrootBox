@@ -47,7 +47,7 @@ const EmailCaptureSection = () => {
         <Row>
         <h3>Stay in <span style={{textDecoration: `underline`}}>{noun}</span>!</h3>
         <FormRow>
-            <form name="contact" method="post" data-netlify="true">
+            <form name="contact" method="post" data-netlify="true" action="/success">
             <input type="hidden" name="form-name" value="contact" />
             <FormInput  placeholder="email..."  name="form-name" />
             <RbButton text={`Go!`} type="submit"/>
