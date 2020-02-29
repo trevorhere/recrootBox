@@ -49,7 +49,7 @@ const EmailCaptureSection = () => {
         <FormRow>
             <form name="contact" method="post" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
-            <FormInput  placeholder="email..."  name="form-name" value="contact" />
+            <FormInput  placeholder="email..."  name="form-name" />
             <RbButton text={`Go!`} type="submit"/>
             </form>
         </FormRow>
