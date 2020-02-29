@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import HeaderSection from "./HeaderSection";
 import PortfolioSection from "./PortfolioSection";
+import EmailCaptureSection from "./EmailCaptureSection";
 import FooterSection from "./FooterSection";
 import { darkMode } from "./ProfileInformation";
 import { Row } from "react-materialize";
@@ -22,6 +23,7 @@ const Home = () => {
       <Row style={{ margin: "0" }}>
         <PortfolioSection darkMode={darkModeProp} />
       </Row>
+      <EmailCaptureSection />
       <FooterSection />
     </div>
   );
