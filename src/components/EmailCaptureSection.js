@@ -46,14 +46,13 @@ const EmailCaptureSection = () => {
     showEmailCapture ?
         <Row>
         <h3>Stay in <span style={{textDecoration: `underline`}}>{noun}</span>!</h3>
-        <FormRow>
+        {/* <FormRow>
             <form name="contact" method="post" data-netlify="true">
             <FormInput  type="hidden"  placeholder="email..."  name="form-name" value="contact" />
             <RbButton text={`Go!`} type="submit"/>
             </form>
-        </FormRow>
+        </FormRow> */}
         <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-        {/* You still need to add the hidden input with the form name to your JSX form */}
         <input type="hidden" name="form-name" value="contact" />
         </form>
      </Row>
