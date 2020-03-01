@@ -49,7 +49,7 @@ const EmailCaptureSection = () => {
         <FormRow>
             <form name="contact" method="post" data-netlify="true" action="/success">
             <input type="hidden" name="form-name" value="contact" />
-            <FormInput  placeholder="email..."  name="form-name" />
+            <Input  placeholder="email..."  name="email" />
             <RbButton text={`Go!`} type="submit"/>
             </form>
         </FormRow>
@@ -78,7 +78,7 @@ const FormRow = styled.div`
 `
 
 
-const FormInput = styled.input`
+const Input = styled.input`
     margin: 0 1rem;
     height: 38px;
     border-radius: 4px;
