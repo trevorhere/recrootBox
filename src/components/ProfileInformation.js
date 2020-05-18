@@ -19,6 +19,7 @@ let accent = "#003344"
 // Import image of your self here:
 //-- For best display purposes, your image should be sqaure (e.g. 300 X 300 px)
 const selfie = "trevor.png";
+const currence = "currence.png";
 const recrootBox = "recrootBox_site.png";
 const campRank =  "camprank_site.png";
 const blogApp = "blogapp-site.png";
@@ -63,9 +64,8 @@ let links = [
   },
   {
     name: "Resume",
-    link: resume,
+    link: '/Resume.pdf',
     icon: FaFileAlt
-
   }
 ];
 
@@ -76,6 +76,12 @@ let links = [
 let portfolioTitle = "Recent Projects"
 let portfolioSectionBackgroundColor = "#003344"
 let portfolioItems = [
+  {
+    imageUrl: currence,
+    title: "Currence",
+    description: "Twitter clone built using React.js, Serverless, & AWS",
+    link: "https://currence.netlify.com/"
+  },
   {
     imageUrl: taskyv,
     title: "Taskyv",
@@ -117,7 +123,7 @@ let showFooter = true;
 
 
 
-let blogName = "The Intern MR";
+let blogName = "Blog";
 let renderBlog = true;
 let gistUrl = `https://api.github.com/gists/68cc754fb298f3121b5b2b4cfaa754d4`
 
