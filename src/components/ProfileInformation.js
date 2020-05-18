@@ -64,7 +64,7 @@ let links = [
   },
   {
     name: "Resume",
-    link: '/Resume.pdf',
+    link: resume,
     icon: FaFileAlt
   }
 ];
