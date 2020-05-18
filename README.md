@@ -4,7 +4,7 @@ Portfolio site template for those new to web development.
 Step by step video instructions can be found here: [📺](https://www.youtube.com/watch?v=tz04HiWaPfc)
 
 ##### _Note:_ 
-* _RecrootBox was switched over from React.js to Gatsby.js on 2/20/20, the only change in terms of settings is the netlify deploy settings_
+* _RecrootBox was switched over from React.js to Gatsby.js on 2/20/20_
 * _The instructions in the video above are geared toward deploying to github pages_
 * _A new video with up-to-date instructions will be released shortly_
 
@@ -14,6 +14,7 @@ Step by step video instructions can be found here: [📺](https://www.youtube.co
 1. Fork this repository onto your own github account
 2. Clone the repository locally
 3. Open `recrootBox/src/components/ProfileInformation.js` and follow instructions in this file to add your information including your bio, image links, project titles, project links, etc.
+4. Open `recrootBot/gatsby-config.js` and change the `title`, `description`, `author`, and `trackingId` (google analytics).  
 
 ## Deploying recrootBox
 
