@@ -3,7 +3,7 @@ import "../app.css";
 import { Link } from 'gatsby';
 
 import { Row } from "react-materialize";
-import { accent } from "../ProfileInformation";
+import { accent } from "../../siteData";
 import ReactMarkdown from "react-markdown";
 
 import styled from 'styled-components'
@@ -59,10 +59,10 @@ const KeepReading = styled(Link)`
 `
 const BlogStub = styled.article`
   margin-bottom: 5rem;
-  width: 50%; 
-  margin:0 auto!important;  
+  width: 50%;
+  margin:0 auto!important;
 
   @media (max-width: 768px) {
-    width: 90%; 
+    width: 90%;
   }
 `

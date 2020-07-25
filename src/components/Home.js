@@ -3,7 +3,7 @@ import HeaderSection from "./HeaderSection";
 import PortfolioSection from "./PortfolioSection";
 import EmailCaptureSection from "./EmailCaptureSection";
 import FooterSection from "./FooterSection";
-import { darkMode } from "./ProfileInformation";
+import { darkMode } from "./../siteData";
 import { Row } from "react-materialize";
 
 import './app.css';

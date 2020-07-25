@@ -2,12 +2,11 @@ import React from "react";
 import "./app.css";
 import { FaBolt, FaRegMoon, FaRegSun } from "react-icons/fa";
 import { Link } from "gatsby"
-import { Switch } from "react-materialize";
 import styled from "styled-components";
 
 import {
-  firstName,
   lastName,
+  firstName,
   title,
   bio,
   selfie,
@@ -17,9 +16,7 @@ import {
   accent,
   blogName,
   renderBlog,
-  campRank,
-  portfolioItems
-} from "./ProfileInformation";
+} from '../siteData';
 import MyImg from './image'
 
 
@@ -47,7 +44,6 @@ const HeaderSection = (props) => {
         <SelfieDiv>
           <MyImg src={selfie} />
         </SelfieDiv>
-
         <NameTitleBlock >
           <h1 className="HS-Name"> {firstName} {lastName}
           </h1>
@@ -86,7 +82,7 @@ const SelfieDiv = styled.div`
 
 const TitleBlock = styled.div`
 margin-bottom: 1rem;
-  
+
 `
 
 const NameTitleBlock = styled.div`

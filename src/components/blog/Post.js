@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../app.css";
 import { Row, Col } from "react-materialize";
 import { Link } from "gatsby";
-import { gistUrl, blogName, accent } from '../ProfileInformation'
+import { gistUrl, blogName, accent } from '../../siteData'
 import PreLoader from "../PreLoader"
 import ReactMarkdown from "react-markdown";
 import './blog.css'
@@ -69,7 +69,7 @@ const Post = props => {
 
   const data =  useFetch(gistUrl, targetFile);
   console.log('data: ', data);
-  console.log('title: ', data.post.title); 
+  console.log('title: ', data.post.title);
 
   if (data.error) {
     return <div>Error: {data.error}</div>;
@@ -114,11 +114,11 @@ const Content  =  styled.div`
   line-height: 1.6;
   letter-spacing: -0.02em;
   font-family: Tinos;
-  width: 50%; 
-  margin:0 auto!important;  
+  width: 50%;
+  margin:0 auto!important;
 
   @media (max-width: 768px) {
-    width: 90%; 
+    width: 90%;
   }
 `
 const HeaderRow = styled.div`
@@ -142,11 +142,11 @@ const HomeLink =  styled(Link)`
 
 
 const HeaderLink =  styled(Link)`
-  background-color: rgb(0, 51, 68); 
-  color: rgb(255, 255, 255); 
-  padding: 20px; 
+  background-color: rgb(0, 51, 68);
+  color: rgb(255, 255, 255);
+  padding: 20px;
   font-family: "Roboto Mono";
-  text-align: center; 
+  text-align: center;
   margin: 0px auto;
 `
 

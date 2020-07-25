@@ -1,7 +1,7 @@
 import React from "react";
 import "./app.css";
 import { Preloader } from "react-materialize";
-import { accent } from './ProfileInformation'
+import { accent } from '../siteData'
 
 const PreLoader = () => {
   return (

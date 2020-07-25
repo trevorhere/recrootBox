@@ -1,5 +1,5 @@
 import React from 'react';
-import { showFooter } from './ProfileInformation'
+import { showFooter } from '../siteData'
 import './app.css';
 
 const FooterSection = () => {

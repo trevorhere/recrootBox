@@ -2,7 +2,7 @@ import React from "react";
 import "../app.css";
 import { Link } from 'gatsby';
 import { Col } from "react-materialize";
-import { accent } from "../ProfileInformation";
+import { accent } from "../../siteData";
 import styled from 'styled-components'
 
 

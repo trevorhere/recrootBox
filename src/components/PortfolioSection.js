@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from "react";
-import { 
-  portfolioTitle, 
-  portfolioItems, 
-  portfolioSectionBackgroundColor 
-} from "./ProfileInformation";
+import {
+  portfolioTitle,
+  portfolioItems,
+  portfolioSectionBackgroundColor
+} from "../siteData";
 import styled from 'styled-components';
 import MyImg from './image'
 import './app.css'
@@ -21,10 +21,6 @@ const PortfolioSection = (props) => {
     setDarkMode(props.darkMode)
   })
 
-  
-
-  console.log('props: ', darkMode)
-
   let darkModeStyle = darkMode ?
     {backgroundColor: `black`, color: `white`} : {};
 
@@ -33,7 +29,6 @@ const PortfolioSection = (props) => {
       <h1 className="PS-Title">{portfolioTitle}</h1>
         <PortfolioRow >
           {portfolioItems.map((item, i) => {
-            console.log('image:', item.imageUrl)
             return (
                 <PortfolioCard
                   key={i}
@@ -72,7 +67,7 @@ const PortfolioRow =  styled.div`
 
 const PortfolioButton = styled.button `
   background-color: #1A202D;
-  padding: .25rem 1rem;  
+  padding: .25rem 1rem;
   border-radius: 4px;
   color: white;
   &:hover {
@@ -92,7 +87,7 @@ const PortfolioCard =  styled.div`
   border-radius: 4px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   @media (max-width: 768px) {
-    width: 90%; 
+    width: 90%;
     margin: 1rem 0;
   }
 `

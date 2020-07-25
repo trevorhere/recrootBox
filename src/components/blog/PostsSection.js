@@ -7,7 +7,7 @@ import PostHeader from "./PostHeader";
 import PreLoader from "../PreLoader";
 import styled, {keyframes} from 'styled-components'
 
-import { gistUrl } from "../ProfileInformation";
+import { gistUrl } from "../../siteData";
 
 const blog = {
   display: "flex",
@@ -79,12 +79,9 @@ const PostsSection = () => {
   const [isLoading, setIsLoading] = useState(false);
   const data = useFetch(gistUrl, setIsLoading);
 
-
-
   const listToggler = () => {
     setListView(!listView);
   }
-
 
   const { error, isLoaded, files } = data;
 

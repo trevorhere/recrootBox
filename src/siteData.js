@@ -10,7 +10,7 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaFileAlt } from "react-icons/fa";
 // import taskyv from "../images/taskyv_site.png";
 // import bookThinks from "../images/bookThinks.png";
 
-import resume from "../assets/Resume.pdf";
+import resume from "./assets/Resume.pdf";
 
 let darkModeSwitch = true;
 let darkMode = false;
@@ -26,16 +26,14 @@ const blogApp = "blogapp-site.png";
 const taskyv = "taskyv_site.png";
 const bookThinks = "bookThinks.png";
 
-
-
 // Edit person info here
 // -- Bio is best kept to around 5 lines
 let firstName = "Trevor";
 let lastName = "Lane";
 let title = "Student / Software Developer";
-let bio = `Currently studying Computer Science at Brigham Young University 
-and working as a software engineering intern at a company called SimpleNexus 
-where I work with Vue.js & Rails. 
+let bio = `Currently studying Computer Science at Brigham Young University
+and working as a software engineering intern at a company called SimpleNexus
+where I work with Vue.js & Rails.
 Feel free to check out some of my past projects below, browse some code on my github profile, or just reach out to say hi!`;
 
 //Edit links to external accounts or items here (e.g. github, linkedIn, leetcode, resume, etc.)

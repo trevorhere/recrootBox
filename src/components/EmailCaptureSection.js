@@ -1,5 +1,5 @@
 import React, {useState, useEffect }from 'react';
-import { showEmailCapture, accent } from './ProfileInformation'
+import { showEmailCapture, accent } from '../siteData'
 import RbButton from './RbButton';
 import './app.css';
 import styled from 'styled-components';
@@ -7,15 +7,15 @@ import styled from 'styled-components';
 
 
 const nouns = [
-    'space', 
-    'France', 
-    'out', 
-    'THERE!!!', 
-    'foo', 
-    'buzz', 
-    'whatever', 
-    ' ........ ',  
-    '@!#$', 
+    'space',
+    'France',
+    'out',
+    'THERE!!!',
+    'foo',
+    'buzz',
+    'whatever',
+    ' ........ ',
+    '@!#$',
     'HERE!!!',
     'existence',
     'fear',
@@ -45,7 +45,7 @@ const EmailCaptureSection = () => {
     return (
     showEmailCapture ?
         <Row>
-        <h3>Stay in <span style={{textDecoration: `underline`}}>{noun}</span>!</h3>
+        <h3>Stay in <span style={{textDecoration: `underline`}}>touch</span>!</h3>
         <FormRow>
             <form name="contact" method="post" data-netlify="true" action="/success">
             <input type="hidden" name="form-name" value="contact" />
@@ -99,4 +99,3 @@ const Input = styled.input`
 //   .FooterSection a:hover {
 //     color: grey;
 //   }
-  

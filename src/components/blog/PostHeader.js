@@ -1,11 +1,9 @@
 import React from 'react';
 import { Row } from "react-materialize"
-import { accent, blogName } from "../ProfileInformation"
+import { accent, blogName } from "../../siteData"
 import { Link } from "gatsby"
 import { FaTh, FaList } from "react-icons/fa";
 import styled from 'styled-components'
-
-
 
 const headerRow = {
   top: "0",

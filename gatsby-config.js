@@ -1,3 +1,5 @@
+import { FaGithub, FaLinkedin, FaEnvelope, FaFileAlt } from "react-icons/fa";
+
 module.exports = {
   siteMetadata: {
     title: `T / L`,
@@ -41,7 +43,7 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Trade Winds`, 
+            family: `Trade Winds`,
           },
           {
             family: `Roboto Mono`,
