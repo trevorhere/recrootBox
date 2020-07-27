@@ -3,6 +3,7 @@ import "../app.css";
 import { Row } from "react-materialize";
 import LinkView from "./LinkView";
 import BlogView from "./BlogView";
+import PostView from "./PostView";
 import PostHeader from "./PostHeader";
 import PreLoader from "../PreLoader";
 import styled, {keyframes} from 'styled-components'
@@ -117,7 +118,7 @@ const PostsSection = () => {
                         content={item.content}
                       />
                     ) : (
-                        <BlogView
+                        <PostView
                           filename={item.filename}
                           title={item.title}
                           date={item.date}
