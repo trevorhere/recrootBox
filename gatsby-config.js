@@ -1,4 +1,3 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaFileAlt } from "react-icons/fa";
 
 module.exports = {
   siteMetadata: {

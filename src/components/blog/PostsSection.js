@@ -63,7 +63,9 @@ const useFetch = (url, isLoadingCallback) => {
             date: fileInfo.date
           });
         }
-        setFiles([...files.reverse()])
+
+        files.sort((a,b) => { return new Date(b.date) - new Date(a.date) })
+        setFiles(files)
         isLoadingCallback(false)
       } catch (error) {
         setError(error);
@@ -85,8 +87,8 @@ const PostsSection = () => {
 
   const { error, isLoaded, files } = data;
 
-  console.log('isLoading: ', isLoading);
-  console.log('data: ', data);
+  // console.log('isLoading: ', isLoading);
+  // console.log('data: ', data);
 
   if (error) {
     return <div>Error: {error.message}</div>;
