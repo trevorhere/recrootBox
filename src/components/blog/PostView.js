@@ -54,7 +54,10 @@ const PostView = (props) => {
           {(card.image && card.title && card.author && card.date )? (
             <div>
                 <Author>{card.author}</Author>
-                <Date>{card.date}</Date>
+                <div style={{display: "flex"}} >
+                  <Date>{card.date}  </Date>
+                  <ReadTime>   ·  {card.readTime} min read</ReadTime>
+                </div>
                 <img src={card.image} alt="test" width="500" />
                 <h1>{card.title}</h1>
               </div>
@@ -82,11 +85,20 @@ font-family: 'Tinos';
 const Author = styled.h1`
   font-size: 16px;
   font-weight: 400;
+  margin-bottom: 5px;
+  color: black;
 `
 
 const Date = styled.h1`
   font-size: 16px;
   font-weight: 400;
+  color: #757575;
+`
+
+const ReadTime = styled.h1`
+  font-size: 16px;
+  font-weight: 400;
+  color: #757575;
 `
 
 const KeepReading = styled(Link)`
@@ -100,11 +112,14 @@ const KeepReading = styled(Link)`
     border: 2px solid ${accent};
   }
 `
-const BlogStub = styled.article`
+const BlogStub = styled.div`
+  display: flex;
   margin-bottom: 5rem;
   width: 50%;
   margin:0 auto!important;
-  box-shadow:         3px 3px 5px 6px #ccc;
+  box-shadow: 2px 2px 2px 2px #ccc;
+  border-radius:5px;
+  padding: 15px;
 
   @media (max-width: 768px) {
     width: 90%;
