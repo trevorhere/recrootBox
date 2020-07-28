@@ -5,8 +5,8 @@ import { Link } from 'gatsby';
 import { Row } from "react-materialize";
 import { accent } from "../../siteData";
 import ReactMarkdown from "react-markdown";
-
 import styled from 'styled-components'
+const WORDS_PER_MINUTE = 250;
 
 
 const buildCard = content => {
@@ -16,6 +16,10 @@ const buildCard = content => {
   card["title"] = splitArr[2].split(':')[1]
   card["date"] = splitArr[3].split(':')[1]
   card["image"] = splitArr[4].split(':')[1] + ':' + splitArr[4].split(':')[2]
+  let readTime = Math.ceil(splitArr[7].split(' ').length / WORDS_PER_MINUTE)
+  card["readTime"] = readTime;
+  console.log('arr: ', splitArr)
+  console.log('card: ', card);
   return card;
 }
 
@@ -29,13 +33,6 @@ const abbrContent = (content) => {
   card["title"] = splitArr[2].split(':')[1]
   card["date"] = splitArr[3].split(':')[1]
   card["image"] = splitArr[4].split(':')[1] + splitArr[4].split(':')[2]
-
-  console.log('card: ', card);
-
-
-
-
-
 
   if (content.split(" ").length < 150) {
     return content;
@@ -54,10 +51,14 @@ const PostView = (props) => {
   return (
     <BlogStub>
         <Row>
-          <MarkDown source={abbrContent(content)} />
-           { card.image ? (
-             <img src={card.image} alt="test" width="500" />
-           ) : null
+          {(card.image && card.title && card.author && card.date )? (
+            <div>
+                <Author>{card.author}</Author>
+                <Date>{card.date}</Date>
+                <img src={card.image} alt="test" width="500" />
+                <h1>{card.title}</h1>
+              </div>
+            ) : null
           }
         </Row>
         {content.length > 500 ? (
@@ -65,7 +66,6 @@ const PostView = (props) => {
               Keep Reading
             </KeepReading>
         ) : null}
-        <hr className="Divider Blue" />
     </BlogStub>
   );
 }
@@ -77,6 +77,16 @@ font-size: 1.5em;
 line-height: 1.6;
 letter-spacing: -0.02em;
 font-family: 'Tinos';
+`
+
+const Author = styled.h1`
+  font-size: 16px;
+  font-weight: 400;
+`
+
+const Date = styled.h1`
+  font-size: 16px;
+  font-weight: 400;
 `
 
 const KeepReading = styled(Link)`
@@ -94,6 +104,7 @@ const BlogStub = styled.article`
   margin-bottom: 5rem;
   width: 50%;
   margin:0 auto!important;
+  box-shadow:         3px 3px 5px 6px #ccc;
 
   @media (max-width: 768px) {
     width: 90%;
