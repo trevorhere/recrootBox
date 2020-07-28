@@ -16,29 +16,24 @@ const buildCard = content => {
   card["title"] = splitArr[2].split(':')[1]
   card["date"] = splitArr[3].split(':')[1]
   card["image"] = splitArr[4].split(':')[1] + ':' + splitArr[4].split(':')[2]
-  let readTime = Math.ceil(splitArr[7].split(' ').length / WORDS_PER_MINUTE)
+  card["content"] = splitArr.slice(7, splitArr.length - 1).join("\n");
+  console.log('len: ', card["content"].split(' ').length)
+  let readTime = Math.ceil(card["content"].split(' ').length / WORDS_PER_MINUTE)
   card["readTime"] = readTime;
-  console.log('arr: ', splitArr)
   console.log('card: ', card);
+
   return card;
 }
 
 const abbrContent = (content) => {
-  console.log('content: ', content)
 
 
-  let card = {}
-  let splitArr = content.split('\n');
-  card["author"] = splitArr[1].split(':')[1]
-  card["title"] = splitArr[2].split(':')[1]
-  card["date"] = splitArr[3].split(':')[1]
-  card["image"] = splitArr[4].split(':')[1] + splitArr[4].split(':')[2]
-
-  if (content.split(" ").length < 150) {
+console.log('content: ', content)
+  if (content.split(" ").length < 30) {
     return content;
   }
 
-  let arr = content.split(" ").slice(0, 150);
+  let arr = content.split(" ").slice(0, 30);
   arr.push("....");
   return arr.join(" ");
 }
@@ -58,17 +53,20 @@ const PostView = (props) => {
                   <Date>{card.date}  </Date>
                   <ReadTime>   ·  {card.readTime} min read</ReadTime>
                 </div>
-                <img src={card.image} alt="test" width="500" />
-                <h1>{card.title}</h1>
+                <div style={{width: '100%', height: '200px', overflow: 'hidden'}}>
+                  <img style={{width: '100%'}} src={card.image} alt="test"  />s
+                </div>
+                <Title>{card.title}</Title>
+                <ReactMarkdown className="markdown" source={abbrContent(card.content)} />
               </div>
             ) : null
           }
         </Row>
-        {content.length > 500 ? (
+        {/* {content.length > 500 ? (
             <KeepReading to={`/posts/${altered_filename}/68cc754fb298f3121b5b2b4cfaa754d4`} >
               Keep Reading
             </KeepReading>
-        ) : null}
+        ) : null} */}
     </BlogStub>
   );
 }
@@ -88,6 +86,17 @@ const Author = styled.h1`
   margin-bottom: 5px;
   color: black;
 `
+const Title = styled.h1`
+  font-size: 34px;
+  margin: 15px 0;
+`
+
+
+const Preview = styled.p`
+  font-size: 34px;
+  margin: 15px 0;
+`
+
 
 const Date = styled.h1`
   font-size: 16px;
@@ -120,6 +129,7 @@ const BlogStub = styled.div`
   box-shadow: 2px 2px 2px 2px #ccc;
   border-radius:5px;
   padding: 15px;
+  margin-bottom: 50px;
 
   @media (max-width: 768px) {
     width: 90%;

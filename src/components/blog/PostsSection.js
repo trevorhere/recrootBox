@@ -109,7 +109,7 @@ const PostsSection = () => {
             {files.map((item, index) => {
               return (
                 <div key={index}>
-                  <Row>
+                  <Row style={{marginBottom: '20px'}}>
                     {listView ? (
                       <LinkView
                         filename={item.filename}
