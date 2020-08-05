@@ -56,12 +56,19 @@ For example: `Huzzah!__10_31_19.md`
 
 ###### _These characters do wonky things to urls: `< > # % { } | \ ^ ~ [ ] `  so don't use them in your file names_
 
-Another important note; The links to the blog posts in recrootBox are generated using the title in the file name, so if you include a title in the file, it's a good idea to make those the same. You can view an example [here](https://api.github.com/gists/68cc754fb298f3121b5b2b4cfaa754d4), I use the file title `Huzzah!` and that's also the title in the blog.
+#### Blog info:
+
+Each gist needs to have the following information formatting exactly as pictured below at the beginning of the file: 
+
+![](https://i.imgur.com/SXCMFdn.png)
+
+See how I've done this for each gist [here](https://gist.github.com/trevorhere/68cc754fb298f3121b5b2b4cfaa754d4)
+
 
 ### `siteData.js` Settings
 
 ```
-let blogName = "./log";
+let blogName = "MY COOL BLOG";
 let renderBlog = true;
 let gistUrl = `https://api.github.com/gists/68cc754fb298f3121b5b2b4cfaa754d4`
 ```
