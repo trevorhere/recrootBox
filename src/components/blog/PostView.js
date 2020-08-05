@@ -53,10 +53,14 @@ const PostView = (props) => {
                   <Date>{card.date}  </Date>
                   <ReadTime>   ·  {card.readTime} min read</ReadTime>
                 </div>
+                <Link to={`/posts/${altered_filename}/68cc754fb298f3121b5b2b4cfaa754d4`} >
                 <div style={{width: '100%', height: '200px', overflow: 'hidden'}}>
                   <img style={{width: '100%'}} src={card.image} alt="test"  />s
                 </div>
+                </Link>
+                <PostLink to={`/posts/${altered_filename}/68cc754fb298f3121b5b2b4cfaa754d4`} >
                 <Title>{card.title}</Title>
+                </PostLink>
                 <ReactMarkdown className="markdown" source={abbrContent(card.content)} />
               </div>
             ) : null
@@ -134,4 +138,18 @@ const BlogStub = styled.div`
   @media (max-width: 768px) {
     width: 90%;
   }
+`
+
+const PostLink = styled(Link)`
+color: ${accent};
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin: 1rem 0;
+padding: .25rem .5rem;
+text-decoration: none;
+
+&:hover {
+  text-decoration: underline;
+}
 `

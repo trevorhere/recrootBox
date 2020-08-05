@@ -8,28 +8,25 @@ import ReactMarkdown from "react-markdown";
 import './blog.css'
 import styled from 'styled-components';
 
-
-
-const translateTitleDate = (fileName) => {
-  let arr = fileName.split("__");
-  let title = arr[0].split("_").join(" ");
-  let date = arr[1]
-    .substr(0, arr[1].length - 3)
-    .split("_")
-    .join("/");
-
-  return { title: title, date: date };
+const formatContent = (content) => {
+  let title = content.split('---')[1].split('\n')[2].split(':')[1];
+  return {
+    title,
+    content:`##${title}\n\n` +  content.split('---')[2],
+    date: content.split('---')[1].split('\n')[3].split(':')[1]
+  }
 }
 
 const handleFetchResponse = (data, targetFile) => {
   if (data) {
-    let post = {
+    const { title, date, content } = formatContent( data.files[`${targetFile}.md`].content )
+
+    return {
       filename: targetFile,
-      content: data.files[`${targetFile}.md`].content,
-      title: translateTitleDate(targetFile).title,
-      date: translateTitleDate(targetFile).date
-    }
-    return post;
+      title,
+      date,
+      content,
+    };
   }
 }
 
@@ -64,7 +61,6 @@ const useFetch = (url, targetFile) => {
 
 
 const Post = props => {
-
   const targetFile =  props.file_name;
 
   const data =  useFetch(gistUrl, targetFile);
