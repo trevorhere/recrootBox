@@ -13,8 +13,10 @@ Step by step video instructions can be found here: [📺](https://www.youtube.co
 
 1. Fork this repository onto your own github account
 2. Clone the repository locally
-3. Open `recrootBox/src/siteData.js` and follow instructions in this file to add your information including your bio, image links, project titles, project links, etc.
-4. Open `recrootBot/gatsby-config.js` and change the `title`, `description`, `author`, and `trackingId` (google analytics).
+3. Make sure you have [Node](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/) installed, then run `npm i` in the newly cloned recrootBox folder
+4. Open `recrootBox/src/siteData.js` and follow instructions in this file to add your information including your bio, image links, project titles, project links, etc.
+5. Open `recrootBot/gatsby-config.js` and change the `title`, `description`, `author`, and `trackingId` (google analytics).
+
 
 ## Deploying recrootBox
 
