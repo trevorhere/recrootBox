@@ -78,7 +78,7 @@ const useFetch = (url, isLoadingCallback) => {
 };
 
 const PostsSection = () => {
-  const [listView, setListView] = useState(true);
+  const [listView, setListView] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const data = useFetch(gistUrl, setIsLoading);
 

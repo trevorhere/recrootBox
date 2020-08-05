@@ -9,23 +9,25 @@ import './blog.css'
 import styled from 'styled-components';
 
 const formatContent = (content) => {
-  let title = content.split('---')[1].split('\n')[2].split(':')[1];
+  let title = `##` + content.split('---')[1].split('\n')[2].split(':')[1] + `\n\n\n\n`;
   return {
     title,
-    content:`##${title}\n\n` +  content.split('---')[2],
-    date: content.split('---')[1].split('\n')[3].split(':')[1]
+    content: content.split('---')[2],
+    date: content.split('---')[1].split('\n')[3].split(':')[1],
+    image: `![](https:${content.split('---')[1].split('\n')[4].split(':')[2]})`
   }
 }
 
 const handleFetchResponse = (data, targetFile) => {
   if (data) {
-    const { title, date, content } = formatContent( data.files[`${targetFile}.md`].content )
+    const { title, date, content, image } = formatContent( data.files[`${targetFile}.md`].content )
 
     return {
       filename: targetFile,
       title,
       date,
       content,
+      image
     };
   }
 }
@@ -86,6 +88,8 @@ const Post = props => {
         </HeaderRow>
         <Blog  className="Blog">
           <Content>
+            <ReactMarkdown className="markdown" source={post?.title} />
+            <ReactMarkdown className="markdown" source={post?.image} />
             <ReactMarkdown className="markdown" source={post?.content} />
           </Content>
         </Blog>
