@@ -44,13 +44,13 @@ To get an idea for how gists are used, check out the gists that I used for my bl
 
 Its pretty simple; a gists can contain many files. For each blog post, i create a file within that gist, write the post and style it using github [markdown](https://developer.github.com/v3/markdown/)
 
-### blog titles
+### Blog Post Titles
 
 The only tricky part is the file title name. recrootBox uses these file names for rendering each post. Thus, they need to follow a specific naming construct or the posts won't load.
 
-This is the construct: `<blog-title><underscore><underscore><month><underscore><day><underscore><year>.md`
+This is the construct: `<post_title><underscore><underscore><month><underscore><day><underscore><year>.md`
 
-For example: `Huzzah!__10_31_19.md`
+For example: `This_is_my_blog_post!__10_31_19.md`
 
 ###### _Dont forget the two underscores in between the post title and the date_
 
