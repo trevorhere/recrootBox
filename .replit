@@ -1,2 +1,2 @@
 language = "nodejs"
-run = "gatsby develop"
+run = "yarn run replit"
