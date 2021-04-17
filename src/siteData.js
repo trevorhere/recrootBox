@@ -31,7 +31,7 @@ const bookThinks = "bookThinks.png";
 let firstName = "Trevor";
 let lastName = "Lane";
 let title = "Software Engineer";
-let bio = `Currently enjoying life as a husband and father of twins. During the day I work as a software engineer at Breeze Aviation.
+let bio = `Currently enjoying life as a husband and father. During the day I work as a software engineer at Breeze Aviation.
 Feel free to check out some of my past projects below, browse some code on my github profile, or just reach out to say hi!`;
 
 // old bios:
@@ -149,4 +149,7 @@ export {
   renderBlog,
   gistUrl,
   campRank
-};
+};  
+
+
+  
