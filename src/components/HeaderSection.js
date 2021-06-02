@@ -15,6 +15,7 @@ import {
   darkModeSwitch,
   accent,
   blogName,
+  blogLink,
   renderBlog,
 } from '../siteData';
 import MyImg from './image'
@@ -34,7 +35,7 @@ const HeaderSection = (props) => {
 
   return (
     <div className="HeaderSection" style={darkModeStyle}>
-      {renderBlog ? < HeaderLink  style={ props.darkMode ? {color: `white`} : {color: `${accent}`} } to="/posts" >{blogName}</HeaderLink> : null}
+      {renderBlog ? < HeaderLink  style={ props.darkMode ? {color: `white`} : {color: `${accent}`} } to={blogLink} >{blogName}</HeaderLink> : null}
       {darkModeSwitch ? (
         <div className="Switch">
           {props.darkMode ? < FaRegSun onClick={props.onSwitch} /> : <FaRegMoon onClick={props.onSwitch} />  }

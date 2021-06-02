@@ -126,6 +126,7 @@ let showFooter = true;
 
 
 let blogName = "Blog";
+let blogLink = "https://blog.trevorlane.dev"
 let renderBlog = true;
 let gistUrl = `https://api.github.com/gists/68cc754fb298f3121b5b2b4cfaa754d4`
 
@@ -146,6 +147,7 @@ export {
   darkMode,
   accent,
   blogName,
+  blogLink,
   renderBlog,
   gistUrl,
   campRank
